@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P3R-UR-Rqx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Results-->
+        <scene sceneID="1W7-lI-6Xd">
+            <objects>
+                <viewController storyboardIdentifier="AddResults" title="Results" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P3R-UR-Rqx" customClass="AddResultsViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lf8-yI-gHl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1E-Dj-t60">
+                                <rect key="frame" x="35" y="101" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7IV-fv-muo">
+                                <rect key="frame" x="35" y="154" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Runner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-Vz-gbW">
+                                <rect key="frame" x="35" y="206" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1 Mile Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-ep-xoQ">
+                                <rect key="frame" x="35" y="257" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2 Mile Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFo-ng-qWf">
+                                <rect key="frame" x="35" y="304" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Finish Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiu-lG-yaB">
+                                <rect key="frame" x="35" y="359" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEl-Tq-c8c">
+                                <rect key="frame" x="0.0" y="9" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Results" id="7yI-g6-1l4">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2ZC-g5-zHi">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="P3R-UR-Rqx" id="eW5-nZ-N7U"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qhB-JX-61G">
+                                            <connections>
+                                                <action selector="addButtonPressed:" destination="P3R-UR-Rqx" id="wvr-DV-I9D"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc runner" translatesAutoresizingMaskIntoConstraints="NO" id="kd0-ED-daU">
+                                <rect key="frame" x="259" y="134" width="100" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fo9-5m-Czu"/>
+                                    <constraint firstAttribute="height" constant="200" id="yha-Oi-tBI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kd0-ED-daU" firstAttribute="centerY" secondItem="lf8-yI-gHl" secondAttribute="centerY" constant="-99.5" id="6Ai-7F-c2W"/>
+                            <constraint firstItem="kd0-ED-daU" firstAttribute="centerX" secondItem="lf8-yI-gHl" secondAttribute="centerX" constant="121.5" id="KcX-TF-63V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BLY-ew-dRr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Results" id="xmD-JY-Ksq"/>
+                    <connections>
+                        <outlet property="eventText" destination="7IV-fv-muo" id="ae2-NS-l27"/>
+                        <outlet property="finishTimeText" destination="eiu-lG-yaB" id="CGa-bK-955"/>
+                        <outlet property="meetText" destination="n1E-Dj-t60" id="g69-7t-JDo"/>
+                        <outlet property="mile1Text" destination="H3g-ep-xoQ" id="M1B-Cq-Pgi"/>
+                        <outlet property="mile2Text" destination="qFo-ng-qWf" id="j0e-zs-GxX"/>
+                        <outlet property="runnerText" destination="oLz-Vz-gbW" id="dRO-Xu-4Q0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0D-bM-Yoy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.20000000000005" y="-738.08095952023996"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cc runner" width="827" height="720"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

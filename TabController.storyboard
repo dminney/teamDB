@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fV-Ad-v8l">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="TjS-Xy-JJr">
+            <objects>
+                <tabBarController storyboardIdentifier="FeedTabController" title="Home" id="5fV-Ad-v8l" customClass="CustomTabbarController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wR3-Qw-XnO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0VT-1g-hnN" kind="relationship" relationship="viewControllers" id="lZc-Rh-fDA"/>
+                        <segue destination="OKk-6l-e0v" kind="relationship" relationship="viewControllers" id="SWv-fV-A17"/>
+                        <segue destination="6HI-s6-TA5" kind="relationship" relationship="viewControllers" id="Jha-4L-mVj"/>
+                        <segue destination="6k7-eP-8Ua" kind="relationship" relationship="viewControllers" id="MD7-hS-EEq"/>
+                        <segue destination="les-gY-gFO" kind="relationship" relationship="viewControllers" id="Rgb-w6-TKO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bux-py-pdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618" y="-955"/>
+        </scene>
+        <!--Runners-->
+        <scene sceneID="1bT-9M-oBK">
+            <objects>
+                <viewController title="Runners" id="6k7-eP-8Ua" customClass="RunnersTabViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yNT-Wc-yzX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C1r-12-xRS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Runners" image="cc-runner-icon" id="3iA-gY-gJ7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mg4-Rr-ZNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-1146"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="4h5-nW-DXS">
+            <objects>
+                <viewController title="News Feed" id="0VT-1g-hnN" customClass="FeedTabViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="467-kU-Uma">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ye1-ev-OQC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News Feed" image="News_1" id="6CF-F4-XhP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfW-qO-p8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-1924"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="ieu-Lh-nCk">
+            <objects>
+                <viewController title="Results" id="les-gY-gFO" customClass="ResultsTabViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ft1-yS-mhS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="74H-0G-htb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Results" id="y1O-L5-t44"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlJ-9X-dXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2122" y="-161"/>
+        </scene>
+        <!--Meet List-->
+        <scene sceneID="21N-W0-wrB">
+            <objects>
+                <viewController id="OKk-6l-e0v" customClass="AddMeetTabViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nte-d3-nib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="p1w-qV-zxG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Meet List" id="1Bu-PM-oih"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCh-II-khJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1361" y="-152"/>
+        </scene>
+        <!--Timers-->
+        <scene sceneID="Pof-TP-jfM">
+            <objects>
+                <viewController title="Timers" id="6HI-s6-TA5" customClass="TimersTabViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QYf-Cx-eHU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fKo-lt-g7V"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timers" image="stopwatch_1" id="J8z-xF-XtS">
+                        <color key="badgeColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXh-SZ-ttu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-452"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="News_1" width="30" height="30"/>
+        <image name="cc-runner-icon" width="35" height="30"/>
+        <image name="stopwatch_1" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

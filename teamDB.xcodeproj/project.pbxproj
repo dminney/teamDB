@@ -7,13 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393D9EFB41B5398EFCC90083 /* Pods_teamDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E2EBF9210155238AAC2A14 /* Pods_teamDB.framework */; };
+		A90F9B3A1FAD3E3600B7CBE8 /* EventInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F9B391FAD3E3600B7CBE8 /* EventInfoModel.swift */; };
+		A91DD4A81FA6782400B9E772 /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DD4A71FA6782400B9E772 /* mainController.swift */; };
+		A91DD4AA1FA6891B00B9E772 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DD4A91FA6891B00B9E772 /* CustomTabBarController.swift */; };
+		A92112D9200AF10100849D9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92112D8200AF10100849D9A /* LoginViewController.swift */; };
+		A928CA0C1FB3DFE100093A3D /* AddMeetRunnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928CA0B1FB3DFE000093A3D /* AddMeetRunnerViewController.swift */; };
+		A9330B911FFBD3F30047CEEC /* AddRunnerSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9330B901FFBD3F30047CEEC /* AddRunnerSwitchCell.swift */; };
+		A9365AFF20127FA70034D47F /* TeamInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9365AFE20127FA70034D47F /* TeamInfoModel.swift */; };
+		A9365B0720138ADA0034D47F /* TeamsFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9365B0620138ADA0034D47F /* TeamsFoundViewController.swift */; };
+		A9365B0B201698D70034D47F /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9365B0A201698D70034D47F /* MainFeedViewController.swift */; };
 		A936B08D1F8BF4AF00F17D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B08C1F8BF4AF00F17D62 /* AppDelegate.swift */; };
-		A936B08F1F8BF4AF00F17D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B08E1F8BF4AF00F17D62 /* ViewController.swift */; };
+		A936B08F1F8BF4AF00F17D62 /* RunnerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B08E1F8BF4AF00F17D62 /* RunnerTableController.swift */; };
 		A936B0921F8BF4AF00F17D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A936B0901F8BF4AF00F17D62 /* Main.storyboard */; };
 		A936B0941F8BF4AF00F17D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A936B0931F8BF4AF00F17D62 /* Assets.xcassets */; };
 		A936B0971F8BF4AF00F17D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A936B0951F8BF4AF00F17D62 /* LaunchScreen.storyboard */; };
-		A936B0A21F8BF4AF00F17D62 /* teamDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B0A11F8BF4AF00F17D62 /* teamDBTests.swift */; };
 		A936B0AD1F8BF4AF00F17D62 /* teamDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B0AC1F8BF4AF00F17D62 /* teamDBUITests.swift */; };
+		A936B0BC1F8C370A00F17D62 /* AddRunnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936B0BB1F8C370A00F17D62 /* AddRunnerViewController.swift */; };
+		A936B0BD1F8C3DBC00F17D62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A936B0BA1F8BF50100F17D62 /* GoogleService-Info.plist */; };
+		A93EA8D2202145820098A0F2 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93EA8D1202145820098A0F2 /* TabController.storyboard */; };
+		A93EA8D7202147AD0098A0F2 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93EA8D6202147AD0098A0F2 /* Results.storyboard */; };
+		A93EA8D9202148280098A0F2 /* Runners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93EA8D8202148280098A0F2 /* Runners.storyboard */; };
+		A93EA8DB202148EB0098A0F2 /* AddMeet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93EA8DA202148EB0098A0F2 /* AddMeet.storyboard */; };
+		A93EA8DD20214AC40098A0F2 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8DC20214AC40098A0F2 /* FeedTabViewController.swift */; };
+		A93EA8DF20214BF40098A0F2 /* TimersTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8DE20214BF40098A0F2 /* TimersTabViewController.swift */; };
+		A93EA8E120214C620098A0F2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8E020214C620098A0F2 /* FirstViewController.swift */; };
+		A93EA8E320214C7B0098A0F2 /* RunnerTimerTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8E220214C7B0098A0F2 /* RunnerTimerTableTableViewController.swift */; };
+		A93EA8E520214C880098A0F2 /* StopWatchCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8E420214C880098A0F2 /* StopWatchCellTableViewCell.swift */; };
+		A93EA8E820214E440098A0F2 /* Timers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93EA8E620214E440098A0F2 /* Timers.storyboard */; };
+		A93EA8EA202155290098A0F2 /* AddMeetTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8E9202155290098A0F2 /* AddMeetTabViewController.swift */; };
+		A93EA8EC202157260098A0F2 /* RunnersTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8EB202157260098A0F2 /* RunnersTabViewController.swift */; };
+		A93EA8EE202157EF0098A0F2 /* ResultsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8ED202157EF0098A0F2 /* ResultsTabViewController.swift */; };
+		A9426ACC201E5A0900A56147 /* MeetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426ACB201E5A0900A56147 /* MeetDetailViewController.swift */; };
+		A9426AD4201EB8B800A56147 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426AD3201EB8B800A56147 /* EventList.swift */; };
+		A9426AD6201EC71B00A56147 /* EventRunnerChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426AD5201EC71B00A56147 /* EventRunnerChoiceController.swift */; };
+		A9426AD8201FB3B200A56147 /* RunnerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426AD7201FB3B200A56147 /* RunnerListViewController.swift */; };
+		A94EBC481F961E7E0012D18F /* RunnerInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94EBC471F961E7E0012D18F /* RunnerInfoModel.swift */; };
+		A96E471E1FF845FD00C597D9 /* AddRunnerCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E471D1FF845FD00C597D9 /* AddRunnerCellModel.swift */; };
+		A97306AC1FEC416900BA5DA3 /* RunnerTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306AA1FEC416900BA5DA3 /* RunnerTimerModel.swift */; };
+		A97306AD1FEC416900BA5DA3 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306AB1FEC416900BA5DA3 /* StopwatchModel.swift */; };
+		A97306B61FEC41F100BA5DA3 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306B51FEC41F100BA5DA3 /* DesignableButton.swift */; };
+		A97306B81FEC41FF00BA5DA3 /* DesignableBtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306B71FEC41FF00BA5DA3 /* DesignableBtton.swift */; };
+		A97306BA1FEC420200BA5DA3 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306B91FEC420200BA5DA3 /* DesignableLabel.swift */; };
+		A97306BC1FEC420400BA5DA3 /* DesignableTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97306BB1FEC420400BA5DA3 /* DesignableTextfield.swift */; };
+		A986DE6F1FADF19500DEEFB4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986DE6E1FADF19500DEEFB4 /* AddEventViewController.swift */; };
+		A990FE531FF30B1F00902408 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990FE521FF30B1F00902408 /* AppState.swift */; };
+		A990FE551FF32CE800902408 /* BaseTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990FE541FF32CE800902408 /* BaseTabBarControllerViewController.swift */; };
+		A990FE571FF32F0000902408 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990FE561FF32F0000902408 /* HomeViewController.swift */; };
+		A9CB0D0E1FBD2DBB00F8C4CE /* AddResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB0D0D1FBD2DBB00F8C4CE /* AddResultsViewController.swift */; };
+		A9DFF8C31FA77751001478FE /* MeetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFF8C21FA77751001478FE /* MeetTableViewController.swift */; };
+		A9DFF8C51FA7A814001478FE /* MeetDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFF8C41FA7A814001478FE /* MeetDataModel.swift */; };
+		A9DFF8C71FA7A972001478FE /* AddMeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFF8C61FA7A972001478FE /* AddMeetViewController.swift */; };
+		A9EDAA701FFFFBFC005266E4 /* DBAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDAA6F1FFFFBFC005266E4 /* DBAccessor.swift */; };
+		A9EDAA8B20000155005266E4 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9EDAA7C1FFFFE31005266E4 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9EDAA902002F5EB005266E4 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDAA8F2002F5EB005266E4 /* ResultsModel.swift */; };
+		A9F74ED5200BF07100CD78BA /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74ED4200BF07100CD78BA /* GetStartedViewController.swift */; };
+		A9F74EDD200BF87800CD78BA /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EDC200BF87800CD78BA /* CreateUserViewController.swift */; };
+		A9F74EE1200D6ED600CD78BA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EE0200D6ED600CD78BA /* UserModel.swift */; };
+		A9F74EE3200D729800CD78BA /* TeamRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EE2200D729800CD78BA /* TeamRoleViewController.swift */; };
+		A9F74EE5200D773C00CD78BA /* Garbage Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EE4200D773C00CD78BA /* Garbage Code.swift */; };
+		A9F74EE7200D877200CD78BA /* CreateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EE6200D877200CD78BA /* CreateTeamViewController.swift */; };
+		A9F74EEA200D8D0500CD78BA /* RunnerFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F74EE8200D8D0500CD78BA /* RunnerFeed.storyboard */; };
+		A9F74EEE200DA1EB00CD78BA /* FindYourTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F74EED200DA1EB00CD78BA /* FindYourTeamViewController.swift */; };
+		D18A7F440DB44D15B00CCF97 /* Pods_teamDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C318B91EECBC6BB8CA3289FD /* Pods_teamDBTests.framework */; };
+		D8A10BEAAD7C7440A68CF246 /* Pods_teamDBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0B4821F8D551FE54F12C8F /* Pods_teamDBUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,22 +88,156 @@
 			remoteGlobalIDString = A936B0881F8BF4AF00F17D62;
 			remoteInfo = teamDB;
 		};
+		A9EDAA7B1FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		A9EDAA7D1FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		A9EDAA7F1FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		A9EDAA811FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		A9EDAA831FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		A9EDAA851FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		A9EDAA871FFFFE31005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		A9EDAA8C20000155005266E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A9EDAA8E20000155005266E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9EDAA8B20000155005266E4 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D98C5FC8CE5510164E3EB14 /* Pods-teamDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamDBTests/Pods-teamDBTests.release.xcconfig"; sourceTree = "<group>"; };
+		636019A322011919BBB3639D /* Pods-teamDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamDBUITests/Pods-teamDBUITests.release.xcconfig"; sourceTree = "<group>"; };
+		63E2EBF9210155238AAC2A14 /* Pods_teamDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teamDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7479164CFB948608AC2B956F /* Pods-teamDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamDB/Pods-teamDB.debug.xcconfig"; sourceTree = "<group>"; };
+		978C02E3667A6B180F8C7855 /* Pods-teamDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamDBTests/Pods-teamDBTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A90F9B391FAD3E3600B7CBE8 /* EventInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoModel.swift; sourceTree = "<group>"; };
+		A91DD4A71FA6782400B9E772 /* mainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
+		A91DD4A91FA6891B00B9E772 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A92112D8200AF10100849D9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A928CA0B1FB3DFE000093A3D /* AddMeetRunnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetRunnerViewController.swift; sourceTree = "<group>"; };
+		A9330B901FFBD3F30047CEEC /* AddRunnerSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRunnerSwitchCell.swift; sourceTree = "<group>"; };
+		A9365AFE20127FA70034D47F /* TeamInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoModel.swift; sourceTree = "<group>"; };
+		A9365B0620138ADA0034D47F /* TeamsFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFoundViewController.swift; sourceTree = "<group>"; };
+		A9365B0A201698D70034D47F /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
 		A936B0891F8BF4AF00F17D62 /* teamDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A936B08C1F8BF4AF00F17D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A936B08E1F8BF4AF00F17D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A936B08E1F8BF4AF00F17D62 /* RunnerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTableController.swift; sourceTree = "<group>"; };
 		A936B0911F8BF4AF00F17D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A936B0931F8BF4AF00F17D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A936B0961F8BF4AF00F17D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A936B0981F8BF4AF00F17D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A936B09D1F8BF4AF00F17D62 /* teamDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A936B0A11F8BF4AF00F17D62 /* teamDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamDBTests.swift; sourceTree = "<group>"; };
 		A936B0A31F8BF4AF00F17D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A936B0A81F8BF4AF00F17D62 /* teamDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A936B0AC1F8BF4AF00F17D62 /* teamDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamDBUITests.swift; sourceTree = "<group>"; };
 		A936B0AE1F8BF4AF00F17D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A936B0BA1F8BF50100F17D62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "teamDB/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A936B0BB1F8C370A00F17D62 /* AddRunnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRunnerViewController.swift; sourceTree = "<group>"; };
+		A93EA8D1202145820098A0F2 /* TabController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = SOURCE_ROOT; };
+		A93EA8D6202147AD0098A0F2 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = SOURCE_ROOT; };
+		A93EA8D8202148280098A0F2 /* Runners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Runners.storyboard; sourceTree = SOURCE_ROOT; };
+		A93EA8DA202148EB0098A0F2 /* AddMeet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddMeet.storyboard; sourceTree = SOURCE_ROOT; };
+		A93EA8DC20214AC40098A0F2 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
+		A93EA8DE20214BF40098A0F2 /* TimersTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersTabViewController.swift; sourceTree = "<group>"; };
+		A93EA8E020214C620098A0F2 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A93EA8E220214C7B0098A0F2 /* RunnerTimerTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunnerTimerTableTableViewController.swift; sourceTree = "<group>"; };
+		A93EA8E420214C880098A0F2 /* StopWatchCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchCellTableViewCell.swift; sourceTree = "<group>"; };
+		A93EA8E720214E440098A0F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RunnerFeed/Base.lproj/Timers.storyboard; sourceTree = SOURCE_ROOT; };
+		A93EA8E9202155290098A0F2 /* AddMeetTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetTabViewController.swift; sourceTree = "<group>"; };
+		A93EA8EB202157260098A0F2 /* RunnersTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnersTabViewController.swift; sourceTree = "<group>"; };
+		A93EA8ED202157EF0098A0F2 /* ResultsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTabViewController.swift; sourceTree = "<group>"; };
+		A9426ACB201E5A0900A56147 /* MeetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetDetailViewController.swift; sourceTree = "<group>"; };
+		A9426AD3201EB8B800A56147 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		A9426AD5201EC71B00A56147 /* EventRunnerChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRunnerChoiceController.swift; sourceTree = "<group>"; };
+		A9426AD7201FB3B200A56147 /* RunnerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerListViewController.swift; sourceTree = "<group>"; };
+		A94EBC471F961E7E0012D18F /* RunnerInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerInfoModel.swift; sourceTree = "<group>"; };
+		A96E471D1FF845FD00C597D9 /* AddRunnerCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRunnerCellModel.swift; sourceTree = "<group>"; };
+		A97306AA1FEC416900BA5DA3 /* RunnerTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunnerTimerModel.swift; sourceTree = "<group>"; };
+		A97306AB1FEC416900BA5DA3 /* StopwatchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
+		A97306B51FEC41F100BA5DA3 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		A97306B71FEC41FF00BA5DA3 /* DesignableBtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignableBtton.swift; path = "/Users/daveminney/Documents/Xcode Projects/teamDB/Designables/DesignableBtton.swift"; sourceTree = "<absolute>"; };
+		A97306B91FEC420200BA5DA3 /* DesignableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = "/Users/daveminney/Documents/Xcode Projects/teamDB/Designables/DesignableLabel.swift"; sourceTree = "<absolute>"; };
+		A97306BB1FEC420400BA5DA3 /* DesignableTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignableTextfield.swift; path = "/Users/daveminney/Documents/Xcode Projects/teamDB/Designables/DesignableTextfield.swift"; sourceTree = "<absolute>"; };
+		A986DE6E1FADF19500DEEFB4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		A990FE521FF30B1F00902408 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A990FE541FF32CE800902408 /* BaseTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		A990FE561FF32F0000902408 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A9CB0D0D1FBD2DBB00F8C4CE /* AddResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultsViewController.swift; sourceTree = "<group>"; };
+		A9DFF8C21FA77751001478FE /* MeetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetTableViewController.swift; sourceTree = "<group>"; };
+		A9DFF8C41FA7A814001478FE /* MeetDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetDataModel.swift; sourceTree = "<group>"; };
+		A9DFF8C61FA7A972001478FE /* AddMeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetViewController.swift; sourceTree = "<group>"; };
+		A9E579F820251411007DFAA8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A9EDAA6F1FFFFBFC005266E4 /* DBAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAccessor.swift; sourceTree = "<group>"; };
+		A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		A9EDAA8F2002F5EB005266E4 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
+		A9F74ED4200BF07100CD78BA /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		A9F74EDC200BF87800CD78BA /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		A9F74EE0200D6ED600CD78BA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A9F74EE2200D729800CD78BA /* TeamRoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRoleViewController.swift; sourceTree = "<group>"; };
+		A9F74EE4200D773C00CD78BA /* Garbage Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Garbage Code.swift"; sourceTree = "<group>"; };
+		A9F74EE6200D877200CD78BA /* CreateTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamViewController.swift; sourceTree = "<group>"; };
+		A9F74EE9200D8D0500CD78BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RunnerFeed.storyboard; sourceTree = "<group>"; };
+		A9F74EED200DA1EB00CD78BA /* FindYourTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourTeamViewController.swift; sourceTree = "<group>"; };
+		C318B91EECBC6BB8CA3289FD /* Pods_teamDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teamDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A2E5C6C30444640260504D /* Pods-teamDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamDB/Pods-teamDB.release.xcconfig"; sourceTree = "<group>"; };
+		EFDAB974F217E4C2ECE594B3 /* Pods-teamDBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamDBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamDBUITests/Pods-teamDBUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD0B4821F8D551FE54F12C8F /* Pods_teamDBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teamDBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393D9EFB41B5398EFCC90083 /* Pods_teamDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18A7F440DB44D15B00CCF97 /* Pods_teamDBTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A10BEAAD7C7440A68CF246 /* Pods_teamDBUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +271,22 @@
 		A936B0801F8BF4AF00F17D62 = {
 			isa = PBXGroup;
 			children = (
+				A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */,
 				A936B08B1F8BF4AF00F17D62 /* teamDB */,
+				A97306B21FEC41DE00BA5DA3 /* Designables */,
+				A94EBC461F961E2E0012D18F /* Models */,
+				A9F74EEB200D8E5400CD78BA /* Sign In */,
+				A93EA8D0202145700098A0F2 /* Tab Controller */,
+				A9F74EEC200D8E9E00CD78BA /* RunnerFeed */,
+				A93EA8CC20213A6B0098A0F2 /* Timers */,
+				A93EA8D3202146610098A0F2 /* Add Meet */,
+				A93EA8D42021466E0098A0F2 /* RunnerTab */,
+				A93EA8D5202147A20098A0F2 /* Results */,
 				A936B0A01F8BF4AF00F17D62 /* teamDBTests */,
 				A936B0AB1F8BF4AF00F17D62 /* teamDBUITests */,
 				A936B08A1F8BF4AF00F17D62 /* Products */,
+				E4372B3F95E2B02EBF7D6134 /* Pods */,
+				AAF192CFC67A7E53C65D374C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +303,14 @@
 		A936B08B1F8BF4AF00F17D62 /* teamDB */ = {
 			isa = PBXGroup;
 			children = (
-				A936B08C1F8BF4AF00F17D62 /* AppDelegate.swift */,
-				A936B08E1F8BF4AF00F17D62 /* ViewController.swift */,
-				A936B0901F8BF4AF00F17D62 /* Main.storyboard */,
-				A936B0931F8BF4AF00F17D62 /* Assets.xcassets */,
 				A936B0951F8BF4AF00F17D62 /* LaunchScreen.storyboard */,
+				A9EDAA6F1FFFFBFC005266E4 /* DBAccessor.swift */,
+				A9F74EE4200D773C00CD78BA /* Garbage Code.swift */,
+				A936B08C1F8BF4AF00F17D62 /* AppDelegate.swift */,
+				A936B0931F8BF4AF00F17D62 /* Assets.xcassets */,
 				A936B0981F8BF4AF00F17D62 /* Info.plist */,
+				A936B0BA1F8BF50100F17D62 /* GoogleService-Info.plist */,
+				A91DD4A71FA6782400B9E772 /* mainController.swift */,
 			);
 			path = teamDB;
 			sourceTree = "<group>";
@@ -110,7 +318,6 @@
 		A936B0A01F8BF4AF00F17D62 /* teamDBTests */ = {
 			isa = PBXGroup;
 			children = (
-				A936B0A11F8BF4AF00F17D62 /* teamDBTests.swift */,
 				A936B0A31F8BF4AF00F17D62 /* Info.plist */,
 			);
 			path = teamDBTests;
@@ -125,6 +332,159 @@
 			path = teamDBUITests;
 			sourceTree = "<group>";
 		};
+		A93EA8CC20213A6B0098A0F2 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				A93EA8E620214E440098A0F2 /* Timers.storyboard */,
+				A93EA8E020214C620098A0F2 /* FirstViewController.swift */,
+				A93EA8E220214C7B0098A0F2 /* RunnerTimerTableTableViewController.swift */,
+				A93EA8E420214C880098A0F2 /* StopWatchCellTableViewCell.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+		A93EA8D0202145700098A0F2 /* Tab Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A93EA8D1202145820098A0F2 /* TabController.storyboard */,
+				A93EA8ED202157EF0098A0F2 /* ResultsTabViewController.swift */,
+				A93EA8EB202157260098A0F2 /* RunnersTabViewController.swift */,
+				A93EA8E9202155290098A0F2 /* AddMeetTabViewController.swift */,
+				A93EA8DC20214AC40098A0F2 /* FeedTabViewController.swift */,
+				A93EA8DE20214BF40098A0F2 /* TimersTabViewController.swift */,
+				A91DD4A91FA6891B00B9E772 /* CustomTabBarController.swift */,
+			);
+			path = "Tab Controller";
+			sourceTree = "<group>";
+		};
+		A93EA8D3202146610098A0F2 /* Add Meet */ = {
+			isa = PBXGroup;
+			children = (
+				A93EA8DA202148EB0098A0F2 /* AddMeet.storyboard */,
+				A9DFF8C21FA77751001478FE /* MeetTableViewController.swift */,
+				A9DFF8C61FA7A972001478FE /* AddMeetViewController.swift */,
+				A986DE6E1FADF19500DEEFB4 /* AddEventViewController.swift */,
+				A928CA0B1FB3DFE000093A3D /* AddMeetRunnerViewController.swift */,
+				A9330B901FFBD3F30047CEEC /* AddRunnerSwitchCell.swift */,
+			);
+			path = "Add Meet";
+			sourceTree = "<group>";
+		};
+		A93EA8D42021466E0098A0F2 /* RunnerTab */ = {
+			isa = PBXGroup;
+			children = (
+				A93EA8D8202148280098A0F2 /* Runners.storyboard */,
+				A936B08E1F8BF4AF00F17D62 /* RunnerTableController.swift */,
+				A936B0BB1F8C370A00F17D62 /* AddRunnerViewController.swift */,
+			);
+			path = RunnerTab;
+			sourceTree = "<group>";
+		};
+		A93EA8D5202147A20098A0F2 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				A93EA8D6202147AD0098A0F2 /* Results.storyboard */,
+				A9CB0D0D1FBD2DBB00F8C4CE /* AddResultsViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		A94EBC461F961E2E0012D18F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A97306AA1FEC416900BA5DA3 /* RunnerTimerModel.swift */,
+				A97306AB1FEC416900BA5DA3 /* StopwatchModel.swift */,
+				A94EBC471F961E7E0012D18F /* RunnerInfoModel.swift */,
+				A9F74EE0200D6ED600CD78BA /* UserModel.swift */,
+				A9DFF8C41FA7A814001478FE /* MeetDataModel.swift */,
+				A90F9B391FAD3E3600B7CBE8 /* EventInfoModel.swift */,
+				A9EDAA8F2002F5EB005266E4 /* ResultsModel.swift */,
+				A990FE521FF30B1F00902408 /* AppState.swift */,
+				A990FE541FF32CE800902408 /* BaseTabBarControllerViewController.swift */,
+				A96E471D1FF845FD00C597D9 /* AddRunnerCellModel.swift */,
+				A9365AFE20127FA70034D47F /* TeamInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A97306B21FEC41DE00BA5DA3 /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				A97306BB1FEC420400BA5DA3 /* DesignableTextfield.swift */,
+				A97306B91FEC420200BA5DA3 /* DesignableLabel.swift */,
+				A97306B71FEC41FF00BA5DA3 /* DesignableBtton.swift */,
+				A97306B51FEC41F100BA5DA3 /* DesignableButton.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
+		A9EDAA721FFFFE30005266E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9EDAA7C1FFFFE31005266E4 /* SQLite.framework */,
+				A9EDAA7E1FFFFE31005266E4 /* SQLiteTests iOS.xctest */,
+				A9EDAA801FFFFE31005266E4 /* SQLite.framework */,
+				A9EDAA821FFFFE31005266E4 /* SQLiteTests Mac.xctest */,
+				A9EDAA841FFFFE31005266E4 /* SQLite.framework */,
+				A9EDAA861FFFFE31005266E4 /* SQLiteTests tvOS.xctest */,
+				A9EDAA881FFFFE31005266E4 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F74EEB200D8E5400CD78BA /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				A936B0901F8BF4AF00F17D62 /* Main.storyboard */,
+				A9365B0620138ADA0034D47F /* TeamsFoundViewController.swift */,
+				A990FE561FF32F0000902408 /* HomeViewController.swift */,
+				A9F74ED4200BF07100CD78BA /* GetStartedViewController.swift */,
+				A9F74EDC200BF87800CD78BA /* CreateUserViewController.swift */,
+				A9F74EE2200D729800CD78BA /* TeamRoleViewController.swift */,
+				A9F74EE6200D877200CD78BA /* CreateTeamViewController.swift */,
+				A9F74EED200DA1EB00CD78BA /* FindYourTeamViewController.swift */,
+				A92112D8200AF10100849D9A /* LoginViewController.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		A9F74EEC200D8E9E00CD78BA /* RunnerFeed */ = {
+			isa = PBXGroup;
+			children = (
+				A9F74EE8200D8D0500CD78BA /* RunnerFeed.storyboard */,
+				A9426AD5201EC71B00A56147 /* EventRunnerChoiceController.swift */,
+				A9426AD3201EB8B800A56147 /* EventList.swift */,
+				A9426AD7201FB3B200A56147 /* RunnerListViewController.swift */,
+				A9426ACB201E5A0900A56147 /* MeetDetailViewController.swift */,
+				A9365B0A201698D70034D47F /* MainFeedViewController.swift */,
+			);
+			path = RunnerFeed;
+			sourceTree = "<group>";
+		};
+		AAF192CFC67A7E53C65D374C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9E579F820251411007DFAA8 /* libsqlite3.tbd */,
+				63E2EBF9210155238AAC2A14 /* Pods_teamDB.framework */,
+				C318B91EECBC6BB8CA3289FD /* Pods_teamDBTests.framework */,
+				FD0B4821F8D551FE54F12C8F /* Pods_teamDBUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4372B3F95E2B02EBF7D6134 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7479164CFB948608AC2B956F /* Pods-teamDB.debug.xcconfig */,
+				D9A2E5C6C30444640260504D /* Pods-teamDB.release.xcconfig */,
+				978C02E3667A6B180F8C7855 /* Pods-teamDBTests.debug.xcconfig */,
+				1D98C5FC8CE5510164E3EB14 /* Pods-teamDBTests.release.xcconfig */,
+				EFDAB974F217E4C2ECE594B3 /* Pods-teamDBUITests.debug.xcconfig */,
+				636019A322011919BBB3639D /* Pods-teamDBUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,13 +492,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A936B0B11F8BF4AF00F17D62 /* Build configuration list for PBXNativeTarget "teamDB" */;
 			buildPhases = (
+				6A1D0CC31DD594F1E442751C /* [CP] Check Pods Manifest.lock */,
 				A936B0851F8BF4AF00F17D62 /* Sources */,
 				A936B0861F8BF4AF00F17D62 /* Frameworks */,
 				A936B0871F8BF4AF00F17D62 /* Resources */,
+				1D141EDF0E8A4040E6926E22 /* [CP] Embed Pods Frameworks */,
+				37F3D9B5A4719D93C281EA0C /* [CP] Copy Pods Resources */,
+				A9EDAA8E20000155005266E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9EDAA8D20000155005266E4 /* PBXTargetDependency */,
 			);
 			name = teamDB;
 			productName = teamDB;
@@ -149,9 +514,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A936B0B41F8BF4AF00F17D62 /* Build configuration list for PBXNativeTarget "teamDBTests" */;
 			buildPhases = (
+				2E887337EA5D551F9F5B0CB1 /* [CP] Check Pods Manifest.lock */,
 				A936B0991F8BF4AF00F17D62 /* Sources */,
 				A936B09A1F8BF4AF00F17D62 /* Frameworks */,
 				A936B09B1F8BF4AF00F17D62 /* Resources */,
+				E557866F6F47334D9DFA4EF6 /* [CP] Embed Pods Frameworks */,
+				A172A429B5850DF53393F200 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +535,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A936B0B71F8BF4AF00F17D62 /* Build configuration list for PBXNativeTarget "teamDBUITests" */;
 			buildPhases = (
+				91D56BF6B652293DB4E7F222 /* [CP] Check Pods Manifest.lock */,
 				A936B0A41F8BF4AF00F17D62 /* Sources */,
 				A936B0A51F8BF4AF00F17D62 /* Frameworks */,
 				A936B0A61F8BF4AF00F17D62 /* Resources */,
+				5ED0C181A5752B366B1EA40B /* [CP] Embed Pods Frameworks */,
+				84C24F50BF7992A539FE89FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,7 +559,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = dminn;
 				TargetAttributes = {
 					A936B0881F8BF4AF00F17D62 = {
@@ -218,6 +589,12 @@
 			mainGroup = A936B0801F8BF4AF00F17D62;
 			productRefGroup = A936B08A1F8BF4AF00F17D62 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A9EDAA721FFFFE30005266E4 /* Products */;
+					ProjectRef = A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A936B0881F8BF4AF00F17D62 /* teamDB */,
@@ -227,12 +604,71 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A9EDAA7C1FFFFE31005266E4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = A9EDAA7B1FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA7E1FFFFE31005266E4 /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = A9EDAA7D1FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA801FFFFE31005266E4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = A9EDAA7F1FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA821FFFFE31005266E4 /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = A9EDAA811FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA841FFFFE31005266E4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = A9EDAA831FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA861FFFFE31005266E4 /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = A9EDAA851FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9EDAA881FFFFE31005266E4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = A9EDAA871FFFFE31005266E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A936B0871F8BF4AF00F17D62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A936B0971F8BF4AF00F17D62 /* LaunchScreen.storyboard in Resources */,
+				A93EA8DB202148EB0098A0F2 /* AddMeet.storyboard in Resources */,
+				A9F74EEA200D8D0500CD78BA /* RunnerFeed.storyboard in Resources */,
+				A93EA8D7202147AD0098A0F2 /* Results.storyboard in Resources */,
+				A93EA8D2202145820098A0F2 /* TabController.storyboard in Resources */,
+				A93EA8D9202148280098A0F2 /* Runners.storyboard in Resources */,
+				A93EA8E820214E440098A0F2 /* Timers.storyboard in Resources */,
+				A936B0BD1F8C3DBC00F17D62 /* GoogleService-Info.plist in Resources */,
 				A936B0941F8BF4AF00F17D62 /* Assets.xcassets in Resources */,
 				A936B0921F8BF4AF00F17D62 /* Main.storyboard in Resources */,
 			);
@@ -254,13 +690,218 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D141EDF0E8A4040E6926E22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-teamDB/Pods-teamDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDB/Pods-teamDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E887337EA5D551F9F5B0CB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teamDBTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37F3D9B5A4719D93C281EA0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDB/Pods-teamDB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED0C181A5752B366B1EA40B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDBUITests/Pods-teamDBUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A1D0CC31DD594F1E442751C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teamDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84C24F50BF7992A539FE89FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDBUITests/Pods-teamDBUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91D56BF6B652293DB4E7F222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teamDBUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A172A429B5850DF53393F200 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDBTests/Pods-teamDBTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E557866F6F47334D9DFA4EF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamDBTests/Pods-teamDBTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A936B0851F8BF4AF00F17D62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A936B08F1F8BF4AF00F17D62 /* ViewController.swift in Sources */,
+				A9426AD4201EB8B800A56147 /* EventList.swift in Sources */,
+				A97306B81FEC41FF00BA5DA3 /* DesignableBtton.swift in Sources */,
+				A990FE531FF30B1F00902408 /* AppState.swift in Sources */,
+				A97306B61FEC41F100BA5DA3 /* DesignableButton.swift in Sources */,
+				A91DD4A81FA6782400B9E772 /* mainController.swift in Sources */,
+				A986DE6F1FADF19500DEEFB4 /* AddEventViewController.swift in Sources */,
+				A9F74EE1200D6ED600CD78BA /* UserModel.swift in Sources */,
+				A9DFF8C51FA7A814001478FE /* MeetDataModel.swift in Sources */,
+				A91DD4AA1FA6891B00B9E772 /* CustomTabBarController.swift in Sources */,
+				A9F74EE7200D877200CD78BA /* CreateTeamViewController.swift in Sources */,
+				A9330B911FFBD3F30047CEEC /* AddRunnerSwitchCell.swift in Sources */,
+				A97306AD1FEC416900BA5DA3 /* StopwatchModel.swift in Sources */,
+				A93EA8DF20214BF40098A0F2 /* TimersTabViewController.swift in Sources */,
+				A9DFF8C31FA77751001478FE /* MeetTableViewController.swift in Sources */,
+				A990FE571FF32F0000902408 /* HomeViewController.swift in Sources */,
+				A92112D9200AF10100849D9A /* LoginViewController.swift in Sources */,
+				A9426ACC201E5A0900A56147 /* MeetDetailViewController.swift in Sources */,
+				A93EA8EA202155290098A0F2 /* AddMeetTabViewController.swift in Sources */,
+				A990FE551FF32CE800902408 /* BaseTabBarControllerViewController.swift in Sources */,
+				A9365B0720138ADA0034D47F /* TeamsFoundViewController.swift in Sources */,
+				A9F74ED5200BF07100CD78BA /* GetStartedViewController.swift in Sources */,
+				A97306BA1FEC420200BA5DA3 /* DesignableLabel.swift in Sources */,
+				A93EA8E520214C880098A0F2 /* StopWatchCellTableViewCell.swift in Sources */,
+				A9F74EDD200BF87800CD78BA /* CreateUserViewController.swift in Sources */,
+				A936B08F1F8BF4AF00F17D62 /* RunnerTableController.swift in Sources */,
+				A97306BC1FEC420400BA5DA3 /* DesignableTextfield.swift in Sources */,
+				A9426AD6201EC71B00A56147 /* EventRunnerChoiceController.swift in Sources */,
+				A93EA8DD20214AC40098A0F2 /* FeedTabViewController.swift in Sources */,
+				A93EA8EC202157260098A0F2 /* RunnersTabViewController.swift in Sources */,
+				A97306AC1FEC416900BA5DA3 /* RunnerTimerModel.swift in Sources */,
+				A928CA0C1FB3DFE100093A3D /* AddMeetRunnerViewController.swift in Sources */,
+				A9EDAA701FFFFBFC005266E4 /* DBAccessor.swift in Sources */,
+				A9426AD8201FB3B200A56147 /* RunnerListViewController.swift in Sources */,
+				A96E471E1FF845FD00C597D9 /* AddRunnerCellModel.swift in Sources */,
+				A9F74EE3200D729800CD78BA /* TeamRoleViewController.swift in Sources */,
+				A93EA8EE202157EF0098A0F2 /* ResultsTabViewController.swift in Sources */,
+				A93EA8E120214C620098A0F2 /* FirstViewController.swift in Sources */,
+				A936B0BC1F8C370A00F17D62 /* AddRunnerViewController.swift in Sources */,
 				A936B08D1F8BF4AF00F17D62 /* AppDelegate.swift in Sources */,
+				A9365B0B201698D70034D47F /* MainFeedViewController.swift in Sources */,
+				A9EDAA902002F5EB005266E4 /* ResultsModel.swift in Sources */,
+				A94EBC481F961E7E0012D18F /* RunnerInfoModel.swift in Sources */,
+				A93EA8E320214C7B0098A0F2 /* RunnerTimerTableTableViewController.swift in Sources */,
+				A9F74EE5200D773C00CD78BA /* Garbage Code.swift in Sources */,
+				A9DFF8C71FA7A972001478FE /* AddMeetViewController.swift in Sources */,
+				A9365AFF20127FA70034D47F /* TeamInfoModel.swift in Sources */,
+				A90F9B3A1FAD3E3600B7CBE8 /* EventInfoModel.swift in Sources */,
+				A9CB0D0E1FBD2DBB00F8C4CE /* AddResultsViewController.swift in Sources */,
+				A9F74EEE200DA1EB00CD78BA /* FindYourTeamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +909,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A936B0A21F8BF4AF00F17D62 /* teamDBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +933,11 @@
 			target = A936B0881F8BF4AF00F17D62 /* teamDB */;
 			targetProxy = A936B0A91F8BF4AF00F17D62 /* PBXContainerItemProxy */;
 		};
+		A9EDAA8D20000155005266E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = A9EDAA8C20000155005266E4 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -310,6 +955,22 @@
 				A936B0961F8BF4AF00F17D62 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A93EA8E620214E440098A0F2 /* Timers.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A93EA8E720214E440098A0F2 /* Base */,
+			);
+			name = Timers.storyboard;
+			sourceTree = "<group>";
+		};
+		A9F74EE8200D8D0500CD78BA /* RunnerFeed.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9F74EE9200D8D0500CD78BA /* Base */,
+			);
+			name = RunnerFeed.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -424,7 +1085,9 @@
 		};
 		A936B0B21F8BF4AF00F17D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7479164CFB948608AC2B956F /* Pods-teamDB.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96PJ8W6VJW;
@@ -439,7 +1102,9 @@
 		};
 		A936B0B31F8BF4AF00F17D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A2E5C6C30444640260504D /* Pods-teamDB.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96PJ8W6VJW;
@@ -454,6 +1119,7 @@
 		};
 		A936B0B51F8BF4AF00F17D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 978C02E3667A6B180F8C7855 /* Pods-teamDBTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +1137,7 @@
 		};
 		A936B0B61F8BF4AF00F17D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D98C5FC8CE5510164E3EB14 /* Pods-teamDBTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +1155,7 @@
 		};
 		A936B0B81F8BF4AF00F17D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFDAB974F217E4C2ECE594B3 /* Pods-teamDBUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +1172,7 @@
 		};
 		A936B0B91F8BF4AF00F17D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636019A322011919BBB3639D /* Pods-teamDBUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

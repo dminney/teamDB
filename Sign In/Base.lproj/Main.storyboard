@@ -17,6 +17,12 @@
         <array key="ArialBold.ttf">
             <string>Arial-BoldMT</string>
         </array>
+        <array key="ArialItalic.ttf">
+            <string>Arial-ItalicMT</string>
+        </array>
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home-->
@@ -28,15 +34,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJF-tu-Lyx" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
-                                <rect key="frame" x="40" y="560" width="120" height="40"/>
+                                <rect key="frame" x="40" y="607" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Dri-g6-mtr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ZxB-BE-xfw"/>
-                                    <constraint firstAttribute="width" constant="120" id="sEd-9F-x3H"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="sEd-9F-x3H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -46,27 +51,31 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="nQG-29-PEU" kind="show" id="hVr-X8-bbM"/>
+                                    <segue destination="nQG-29-PEU" kind="show" identifier="SignInSegue" id="hVr-X8-bbM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cross Country Team Coach " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACA-A9-YgD">
-                                <rect key="frame" x="66" y="64" width="243" height="63"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cross Country Team Coach " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACA-A9-YgD">
+                                <rect key="frame" x="66" y="64" width="243" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="1Y1-jj-e4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="28"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xi-IN-3G4" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
-                                <rect key="frame" x="219" y="560" width="120" height="40"/>
+                                <rect key="frame" x="219" y="607" width="120" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="1Cm-LV-VP7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="1Cm-LV-VP7"/>
+                                    <constraint firstAttribute="height" constant="40" id="niW-LS-r4z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Get Started">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -76,41 +85,43 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="OMf-qI-dEU" kind="show" id="NAk-Ms-txP"/>
+                                    <segue destination="OMf-qI-dEU" kind="show" identifier="GetStartedSegue" id="NAk-Ms-txP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-dX-vP0">
-                                <rect key="frame" x="0.0" y="150" width="375" height="365"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-dX-vP0">
+                                <rect key="frame" x="0.0" y="150" width="375" height="412"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Camryn Finishing"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.34487892524722219" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6xi-IN-3G4" firstAttribute="leading" secondItem="ZJF-tu-Lyx" secondAttribute="trailing" constant="59" id="4Ys-Qj-wpR"/>
                             <constraint firstItem="Gqf-dX-vP0" firstAttribute="trailing" secondItem="aV3-Rp-jOH" secondAttribute="trailing" id="4aQ-yo-Sf1"/>
                             <constraint firstItem="ZJF-tu-Lyx" firstAttribute="leading" secondItem="aV3-Rp-jOH" secondAttribute="leading" constant="40" id="4gj-Ac-k4W"/>
-                            <constraint firstItem="aV3-Rp-jOH" firstAttribute="bottom" secondItem="ZJF-tu-Lyx" secondAttribute="bottom" constant="67" id="9d2-Ds-f3F"/>
-                            <constraint firstItem="Gqf-dX-vP0" firstAttribute="top" secondItem="ACA-A9-YgD" secondAttribute="bottom" constant="43" id="LwF-j3-4z5"/>
-                            <constraint firstItem="aV3-Rp-jOH" firstAttribute="trailing" secondItem="ACA-A9-YgD" secondAttribute="trailing" constant="66" id="OhE-Rc-Ps5"/>
+                            <constraint firstItem="Gqf-dX-vP0" firstAttribute="top" secondItem="ACA-A9-YgD" secondAttribute="bottom" constant="20" id="SD3-4Y-tNL"/>
                             <constraint firstItem="ZJF-tu-Lyx" firstAttribute="top" secondItem="6xi-IN-3G4" secondAttribute="top" id="clO-Ug-MNx"/>
                             <constraint firstItem="ZJF-tu-Lyx" firstAttribute="top" secondItem="Gqf-dX-vP0" secondAttribute="bottom" constant="45" id="eXX-Vw-GZQ"/>
-                            <constraint firstItem="ACA-A9-YgD" firstAttribute="top" secondItem="aV3-Rp-jOH" secondAttribute="top" id="grq-4c-9JN"/>
-                            <constraint firstItem="ACA-A9-YgD" firstAttribute="leading" secondItem="aV3-Rp-jOH" secondAttribute="leading" constant="66" id="kAb-ar-Dwe"/>
+                            <constraint firstItem="ACA-A9-YgD" firstAttribute="leading" secondItem="aV3-Rp-jOH" secondAttribute="leading" constant="66" id="gWz-3B-AGE"/>
+                            <constraint firstItem="ACA-A9-YgD" firstAttribute="centerX" secondItem="Gqf-dX-vP0" secondAttribute="centerX" id="md0-fg-4oH"/>
                             <constraint firstItem="ZJF-tu-Lyx" firstAttribute="baseline" secondItem="6xi-IN-3G4" secondAttribute="firstBaseline" id="nol-QW-Xkk"/>
+                            <constraint firstItem="ACA-A9-YgD" firstAttribute="top" secondItem="aV3-Rp-jOH" secondAttribute="top" id="nzV-IV-LYb"/>
                             <constraint firstItem="Gqf-dX-vP0" firstAttribute="leading" secondItem="aV3-Rp-jOH" secondAttribute="leading" id="ydi-5b-YHr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aV3-Rp-jOH"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="gy3-q5-M0B"/>
+                    <navigationItem key="navigationItem" title="Cross Country Team Coach" largeTitleDisplayMode="never" id="gy3-q5-M0B">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="gYi-s2-Acw"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9t-ZK-IaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1615.2" y="-825.33733133433293"/>
+            <point key="canvasLocation" x="-1616.8" y="-826.23688155922048"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="GVY-ez-ksE">
@@ -121,50 +132,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6N-Zd-Z1a">
-                                <rect key="frame" x="16" y="80" width="155" height="66"/>
+                                <rect key="frame" x="20" y="80" width="151" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="AnW-Su-tlB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="noR-EF-Uc0" customClass="DesignableTextfield" customModule="teamDB" customModuleProvider="target">
-                                <rect key="frame" x="16" y="170" width="343" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Email *" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="noR-EF-Uc0" customClass="DesignableTextfield" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="20" y="170" width="339" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ggu-JY-aLa"/>
                                 </constraints>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-Ya-wwe" customClass="DesignableTextfield" customModule="teamDB" customModuleProvider="target">
-                                <rect key="frame" x="16" y="218" width="343" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Password *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-Ya-wwe" customClass="DesignableTextfield" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="20" y="218" width="339" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ahs-nN-pQ0"/>
                                 </constraints>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc3-py-PHC" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
-                                <rect key="frame" x="250" y="292" width="109" height="40"/>
+                                <rect key="frame" x="244" y="292" width="115" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="dDD-1P-Itc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="dDD-1P-Itc"/>
                                     <constraint firstAttribute="height" constant="40" id="xVm-rZ-8We"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -174,20 +187,32 @@
                                     <action selector="signInPressed:" destination="nQG-29-PEU" eventType="touchUpInside" id="9Gp-yq-JMl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* are required fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbu-0r-H97">
+                                <rect key="frame" x="25" y="266" width="131" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="K9I-l2-5iL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="QTe-sB-eNs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="5.5468059139999997e-05" green="0.34576407069999998" blue="0.31607866289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P4x-md-bO4" firstAttribute="trailing" secondItem="CEC-Ya-wwe" secondAttribute="trailing" constant="16" id="4Me-pa-TKW"/>
-                            <constraint firstItem="noR-EF-Uc0" firstAttribute="leading" secondItem="RIO-4n-boA" secondAttribute="leadingMargin" id="6YI-lS-i0w"/>
-                            <constraint firstItem="CEC-Ya-wwe" firstAttribute="leading" secondItem="P4x-md-bO4" secondAttribute="leading" constant="16" id="Keg-rg-11t"/>
+                            <constraint firstItem="qbu-0r-H97" firstAttribute="top" secondItem="CEC-Ya-wwe" secondAttribute="bottom" constant="8" id="F5Q-wa-2E9"/>
+                            <constraint firstItem="CEC-Ya-wwe" firstAttribute="leading" secondItem="P4x-md-bO4" secondAttribute="leading" constant="20" id="Keg-rg-11t"/>
                             <constraint firstItem="i6N-Zd-Z1a" firstAttribute="leading" secondItem="noR-EF-Uc0" secondAttribute="leading" id="LVW-y8-qpY"/>
                             <constraint firstItem="CEC-Ya-wwe" firstAttribute="top" secondItem="noR-EF-Uc0" secondAttribute="bottom" constant="8" id="OHI-s6-R1h"/>
                             <constraint firstItem="Kc3-py-PHC" firstAttribute="top" secondItem="CEC-Ya-wwe" secondAttribute="bottom" constant="34" id="OXO-Ii-dTr"/>
+                            <constraint firstItem="qbu-0r-H97" firstAttribute="leading" secondItem="P4x-md-bO4" secondAttribute="leading" constant="25" id="Pfj-wC-XTT"/>
                             <constraint firstItem="P4x-md-bO4" firstAttribute="trailing" secondItem="i6N-Zd-Z1a" secondAttribute="trailing" constant="204" id="YET-iQ-ezz"/>
                             <constraint firstItem="noR-EF-Uc0" firstAttribute="top" secondItem="i6N-Zd-Z1a" secondAttribute="bottom" constant="24" id="ej9-P6-aTk"/>
                             <constraint firstItem="noR-EF-Uc0" firstAttribute="trailing" secondItem="RIO-4n-boA" secondAttribute="trailingMargin" id="hKq-Qz-aKx"/>
                             <constraint firstItem="i6N-Zd-Z1a" firstAttribute="top" secondItem="RIO-4n-boA" secondAttribute="top" constant="80" id="jZ1-GT-DBB"/>
+                            <constraint firstItem="i6N-Zd-Z1a" firstAttribute="leading" secondItem="P4x-md-bO4" secondAttribute="leading" constant="20" id="kBl-fP-V4b"/>
                             <constraint firstItem="P4x-md-bO4" firstAttribute="trailing" secondItem="Kc3-py-PHC" secondAttribute="trailing" constant="16" id="vjF-1M-HIT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P4x-md-bO4"/>
@@ -197,11 +222,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="noR-EF-Uc0" id="wcV-bJ-BYj"/>
                         <outlet property="passwordTextField" destination="CEC-Ya-wwe" id="cE9-Ka-3V3"/>
+                        <segue destination="eq7-UA-swb" kind="show" identifier="findTeamSegue" id="OHu-hb-S3e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be0-ve-8HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-724" y="-825"/>
+            <point key="canvasLocation" x="1171.5" y="-825.5"/>
         </scene>
         <!--Ready?-->
         <scene sceneID="ezq-xb-eP8">
@@ -214,7 +240,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to get Started?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJl-Es-pwC">
                                 <rect key="frame" x="16" y="104" width="200" height="23"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-XW-wku">
@@ -227,8 +253,11 @@
                                 <state key="normal">
                                     <string key="title">Find Your Team -
 Family, Friends &amp; Runners</string>
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="FamilyButtonPressed:" destination="OMf-qI-dEU" eventType="touchUpInside" id="41W-FZ-ff7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Vz-k2k">
                                 <rect key="frame" x="-1" y="302" width="375" height="60"/>
@@ -240,14 +269,15 @@ Family, Friends &amp; Runners</string>
                                 <state key="normal">
                                     <string key="title">Create Your Team -
 Coaches &amp; Timekeepers</string>
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ifa-8f-djT" kind="show" id="oFy-dp-ud0"/>
+                                    <action selector="CoachButtonPressed:" destination="OMf-qI-dEU" eventType="touchUpInside" id="uGA-f6-Ekv"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="5.5468059139999997e-05" green="0.34576407069999998" blue="0.31607866289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="144-E9-mKN" firstAttribute="trailing" secondItem="lJl-Es-pwC" secondAttribute="trailing" constant="159" id="553-jo-CFf"/>
                             <constraint firstItem="Eoy-XW-wku" firstAttribute="top" secondItem="lJl-Es-pwC" secondAttribute="bottom" constant="81" id="5R6-c8-kQD"/>
@@ -261,13 +291,18 @@ Coaches &amp; Timekeepers</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="144-E9-mKN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ready?" id="rkF-Yp-ReF"/>
+                    <navigationItem key="navigationItem" title="Ready?" id="rkF-Yp-ReF">
+                        <barButtonItem key="backBarButtonItem" title="Your Role" id="9qH-Rj-m9A"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ifa-8f-djT" kind="show" identifier="createAccountSegue" id="k3f-kR-GKf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sY-5H-JUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1615" y="-42"/>
         </scene>
-        <!--Create User View Controller-->
+        <!--New Account-->
         <scene sceneID="0gC-6V-L3I">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" id="ifa-8f-djT" customClass="CreateUserViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -278,20 +313,21 @@ Coaches &amp; Timekeepers</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First, create an account ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-R4-6p6">
                                 <rect key="frame" x="16" y="104" width="238" height="23"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder=" First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-ca-mjD">
-                                <rect key="frame" x="10" y="167" width="356" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-ca-mjD">
+                                <rect key="frame" x="16" y="167" width="349" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="poA-KP-rH3"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="given-name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder=" Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rR-iY-5c0">
-                                <rect key="frame" x="10" y="208" width="356" height="40"/>
+                                <rect key="frame" x="16" y="208" width="349" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dqC-0H-nxg"/>
@@ -299,8 +335,8 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder=" Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-dw-IVh">
-                                <rect key="frame" x="10" y="273" width="356" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder=" Email *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-dw-IVh">
+                                <rect key="frame" x="16" y="273" width="349" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="m2D-lR-fhS"/>
@@ -308,8 +344,8 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-K1-8aj">
-                                <rect key="frame" x="10" y="314" width="356" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Password *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-K1-8aj">
+                                <rect key="frame" x="16" y="314" width="349" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="l9y-NQ-eoQ"/>
@@ -317,48 +353,62 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-BM-4H6">
-                                <rect key="frame" x="266" y="377" width="93" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-BM-4H6" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="244" y="377" width="115" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="PIw-3G-FX6"/>
+                                    <constraint firstAttribute="height" constant="40" id="jd4-DM-ZhT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="5.5468059139999997e-05" green="0.34576407069999998" blue="0.31607866289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="ifa-8f-djT" eventType="touchUpInside" id="tPr-Vw-c4w"/>
-                                    <segue destination="nWZ-cg-iS0" kind="show" identifier="teamRoleSegue" id="Aja-un-2Fg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KGS-dw-IVh" firstAttribute="top" secondItem="1rR-iY-5c0" secondAttribute="bottom" constant="25" id="4WD-hD-yka"/>
                             <constraint firstItem="ddJ-BM-4H6" firstAttribute="top" secondItem="ig9-K1-8aj" secondAttribute="bottom" constant="23" id="6tS-6I-xd4"/>
                             <constraint firstItem="PvR-R4-6p6" firstAttribute="top" secondItem="Soz-St-Onz" secondAttribute="top" constant="40" id="96C-zd-cMA"/>
                             <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="ddJ-BM-4H6" secondAttribute="trailing" constant="16" id="AFe-4O-c2N"/>
                             <constraint firstItem="3F2-ca-mjD" firstAttribute="top" secondItem="PvR-R4-6p6" secondAttribute="bottom" constant="40" id="D4L-ZR-TWP"/>
-                            <constraint firstItem="KGS-dw-IVh" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="10" id="H5c-AC-b4Z"/>
-                            <constraint firstItem="ddJ-BM-4H6" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="266" id="L7c-fM-fnc"/>
+                            <constraint firstItem="KGS-dw-IVh" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="16" id="H5c-AC-b4Z"/>
                             <constraint firstItem="ig9-K1-8aj" firstAttribute="top" secondItem="KGS-dw-IVh" secondAttribute="bottom" constant="1" id="MpQ-iv-YTS"/>
                             <constraint firstItem="1rR-iY-5c0" firstAttribute="top" secondItem="3F2-ca-mjD" secondAttribute="bottom" constant="1" id="Ufi-pJ-uwX"/>
-                            <constraint firstItem="1rR-iY-5c0" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="10" id="eEy-yr-5vR"/>
-                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="KGS-dw-IVh" secondAttribute="trailing" constant="9" id="exc-HA-p1V"/>
-                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="ig9-K1-8aj" secondAttribute="trailing" constant="9" id="iUw-d1-3Yv"/>
-                            <constraint firstItem="3F2-ca-mjD" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="10" id="jpg-Wh-ETP"/>
+                            <constraint firstItem="1rR-iY-5c0" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="16" id="eEy-yr-5vR"/>
+                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="KGS-dw-IVh" secondAttribute="trailing" constant="10" id="exc-HA-p1V"/>
+                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="ig9-K1-8aj" secondAttribute="trailing" constant="10" id="iUw-d1-3Yv"/>
+                            <constraint firstItem="3F2-ca-mjD" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="16" id="jpg-Wh-ETP"/>
                             <constraint firstItem="PvR-R4-6p6" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="16" id="kJl-Mf-1Ub"/>
-                            <constraint firstItem="3F2-ca-mjD" firstAttribute="trailing" secondItem="Soz-St-Onz" secondAttribute="trailing" constant="-9" id="mpo-S7-hPT"/>
+                            <constraint firstItem="3F2-ca-mjD" firstAttribute="trailing" secondItem="Soz-St-Onz" secondAttribute="trailing" constant="-10" id="mpo-S7-hPT"/>
                             <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="PvR-R4-6p6" secondAttribute="trailing" constant="121" id="oXs-Np-o37"/>
-                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="1rR-iY-5c0" secondAttribute="trailing" constant="9" id="sYi-sh-jrE"/>
-                            <constraint firstItem="ig9-K1-8aj" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="10" id="yQS-AM-tCr"/>
+                            <constraint firstItem="Soz-St-Onz" firstAttribute="trailing" secondItem="1rR-iY-5c0" secondAttribute="trailing" constant="10" id="sYi-sh-jrE"/>
+                            <constraint firstItem="ig9-K1-8aj" firstAttribute="leading" secondItem="Soz-St-Onz" secondAttribute="leading" constant="16" id="yQS-AM-tCr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Soz-St-Onz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="B1N-AR-dh2"/>
+                    <navigationItem key="navigationItem" title="New Account" id="B1N-AR-dh2"/>
                     <connections>
                         <outlet property="emailField" destination="KGS-dw-IVh" id="zmE-bP-wjt"/>
                         <outlet property="firstNameField" destination="3F2-ca-mjD" id="PkJ-fN-HU6"/>
                         <outlet property="lastNameField" destination="1rR-iY-5c0" id="KMe-Rv-ohy"/>
                         <outlet property="nextButton" destination="ddJ-BM-4H6" id="0Dg-sX-o7w"/>
                         <outlet property="passwordField" destination="ig9-K1-8aj" id="7XU-ij-Cyu"/>
+                        <segue destination="nWZ-cg-iS0" kind="show" identifier="teamRoleSegue" id="6Zq-SU-j3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSr-4Y-6Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,14 +426,14 @@ Coaches &amp; Timekeepers</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oa-vZ-fse">
                                 <rect key="frame" x="16" y="107" width="168" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="MFb-om-nQQ"/>
-                                    <constraint firstAttribute="height" constant="25" id="aHY-u8-lK6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="54Z-vp-IIz"/>
+                                    <constraint firstAttribute="height" constant="25" id="rxu-cV-q4q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Organization Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-W8-cx1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Organization Name *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-W8-cx1">
                                 <rect key="frame" x="10" y="167" width="356" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -392,7 +442,7 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Postal Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vw8-Za-MdB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Postal Code *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vw8-Za-MdB">
                                 <rect key="frame" x="10" y="273" width="356" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -406,7 +456,7 @@ Coaches &amp; Timekeepers</string>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M1j-hP-ZIZ"/>
-                                    <constraint firstAttribute="width" constant="356" id="Mww-JM-30m"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="356" id="Mww-JM-30m"/>
                                 </constraints>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -430,14 +480,6 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8P-Op-Ao8">
-                                <rect key="frame" x="240" y="464" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <state key="normal" title="Create Team">
-                                    <color key="titleColor" red="0.2618662672" green="0.3847410443" blue="0.30196702850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Team Name / Mascot" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zV7-vI-8Jz">
                                 <rect key="frame" x="10" y="208" width="356" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -447,41 +489,88 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* are required fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89I-Hw-fqO">
+                                <rect key="frame" x="10" y="448" width="131" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="ABG-8u-Nqr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnG-rU-Cf7" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="226" y="499" width="115" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bwI-fL-Yh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title=" Create Team ">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createTeamButtonPressed:" destination="Bsc-Mo-YTN" eventType="touchUpInside" id="mpF-hi-nz6"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2nt-W8-cx1" firstAttribute="top" secondItem="5Oa-vZ-fse" secondAttribute="bottom" constant="35" id="0eY-Sq-azt"/>
                             <constraint firstItem="C41-94-uHm" firstAttribute="top" secondItem="0Jg-zf-dAe" secondAttribute="bottom" constant="1" id="0iu-lT-I9d"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="CYB-Js-jYb" secondAttribute="trailing" constant="9" id="2QS-WA-eGc"/>
+                            <constraint firstItem="5Oa-vZ-fse" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="16" id="3O6-Ma-RTi"/>
+                            <constraint firstItem="WnG-rU-Cf7" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="226" id="3mk-jY-5fy"/>
                             <constraint firstItem="0Jg-zf-dAe" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="79F-sK-ew1"/>
                             <constraint firstItem="0Jg-zf-dAe" firstAttribute="top" secondItem="vw8-Za-MdB" secondAttribute="bottom" constant="1" id="7eE-K0-JFJ"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="C41-94-uHm" secondAttribute="trailing" constant="9" id="86R-ol-eAT"/>
                             <constraint firstItem="2nt-W8-cx1" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="9i1-dz-fLs"/>
                             <constraint firstItem="0Jg-zf-dAe" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="BaK-tA-j7s"/>
+                            <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="5Oa-vZ-fse" secondAttribute="trailing" constant="191" id="BsQ-r4-ZoM"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="zV7-vI-8Jz" secondAttribute="trailing" constant="9" id="CR5-pN-DIU"/>
                             <constraint firstItem="0Jg-zf-dAe" firstAttribute="top" secondItem="vw8-Za-MdB" secondAttribute="bottom" constant="1" id="Exl-gh-esB"/>
                             <constraint firstItem="CYB-Js-jYb" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="FSp-m7-hUP"/>
-                            <constraint firstItem="5Oa-vZ-fse" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="16" id="GSk-kE-DpS"/>
+                            <constraint firstItem="89I-Hw-fqO" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="HYS-z6-2dk"/>
+                            <constraint firstItem="14n-DW-kvo" firstAttribute="bottom" secondItem="WnG-rU-Cf7" secondAttribute="bottom" constant="128" id="LST-cf-8uX"/>
                             <constraint firstItem="CYB-Js-jYb" firstAttribute="top" secondItem="C41-94-uHm" secondAttribute="bottom" constant="5" id="MZl-Pj-cpR"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="0Jg-zf-dAe" secondAttribute="trailing" constant="9" id="O8z-t8-GKl"/>
+                            <constraint firstItem="89I-Hw-fqO" firstAttribute="top" secondItem="CYB-Js-jYb" secondAttribute="bottom" constant="8" id="Odw-Pw-NH3"/>
+                            <constraint firstItem="WnG-rU-Cf7" firstAttribute="top" secondItem="CYB-Js-jYb" secondAttribute="bottom" constant="59" id="Qky-Un-RgR"/>
                             <constraint firstItem="zV7-vI-8Jz" firstAttribute="top" secondItem="2nt-W8-cx1" secondAttribute="bottom" constant="1" id="RSl-Lf-MMG"/>
                             <constraint firstItem="vw8-Za-MdB" firstAttribute="top" secondItem="zV7-vI-8Jz" secondAttribute="bottom" constant="25" id="ZAU-Wv-XwB"/>
                             <constraint firstItem="vw8-Za-MdB" firstAttribute="top" secondItem="zV7-vI-8Jz" secondAttribute="bottom" constant="25" id="bPY-H3-eLh"/>
                             <constraint firstItem="0Jg-zf-dAe" firstAttribute="top" secondItem="vw8-Za-MdB" secondAttribute="bottom" constant="1" id="edf-ku-nxE"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="vw8-Za-MdB" secondAttribute="trailing" constant="9" id="f2e-92-y3M"/>
                             <constraint firstItem="zV7-vI-8Jz" firstAttribute="top" secondItem="2nt-W8-cx1" secondAttribute="bottom" constant="1" id="fog-zW-hJZ"/>
-                            <constraint firstItem="5Oa-vZ-fse" firstAttribute="top" secondItem="14n-DW-kvo" secondAttribute="top" constant="43" id="gNl-JA-mdc"/>
                             <constraint firstItem="vw8-Za-MdB" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="hZZ-XO-2T5"/>
+                            <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="WnG-rU-Cf7" secondAttribute="trailing" constant="34" id="hbl-4J-XLP"/>
+                            <constraint firstItem="5Oa-vZ-fse" firstAttribute="top" secondItem="14n-DW-kvo" secondAttribute="top" constant="43" id="hhl-cm-feW"/>
                             <constraint firstItem="zV7-vI-8Jz" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="kOK-Ya-QPK"/>
                             <constraint firstItem="C41-94-uHm" firstAttribute="leading" secondItem="14n-DW-kvo" secondAttribute="leading" constant="10" id="mtQ-dE-hQA"/>
                             <constraint firstItem="14n-DW-kvo" firstAttribute="trailing" secondItem="2nt-W8-cx1" secondAttribute="trailing" constant="9" id="zKd-Qm-wGE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="14n-DW-kvo"/>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="0Jg-zf-dAe" id="WBb-5p-ht2"/>
+                        <outlet property="organizationField" destination="2nt-W8-cx1" id="IIx-cf-NOz"/>
+                        <outlet property="postalCodeField" destination="vw8-Za-MdB" id="eMA-9H-EMR"/>
+                        <outlet property="stateField" destination="C41-94-uHm" id="mG7-61-iUK"/>
+                        <outlet property="teamNameField" destination="zV7-vI-8Jz" id="IAw-Xq-oFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BD-ba-nht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-44"/>
+            <point key="canvasLocation" x="664.5" y="-45.5"/>
         </scene>
         <!--Team Role View Controller-->
         <scene sceneID="QtD-lN-PkK">
@@ -497,7 +586,7 @@ Coaches &amp; Timekeepers</string>
                                     <constraint firstAttribute="height" constant="25" id="FjI-Sp-emU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eMQ-x7-NiK">
@@ -508,7 +597,7 @@ Coaches &amp; Timekeepers</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 <state key="normal" title="Fan / Family">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="fanButtonPressed:" destination="nWZ-cg-iS0" eventType="touchUpInside" id="e1V-bB-gRc"/>
@@ -518,35 +607,33 @@ Coaches &amp; Timekeepers</string>
                                 <rect key="frame" x="0.0" y="172" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="g4F-r0-HlX"/>
                                     <constraint firstAttribute="height" constant="60" id="itm-YR-SOy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 <state key="normal" title="Coaching Staff">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="coachButtonPressed:" destination="nWZ-cg-iS0" eventType="touchUpInside" id="Koz-xw-1a7"/>
-                                    <segue destination="Bsc-Mo-YTN" kind="show" identifier="createTeamSegue" id="VRR-Pr-KPB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-r9-WUO">
                                 <rect key="frame" x="0.0" y="316" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ate-oF-HM2"/>
                                     <constraint firstAttribute="height" constant="60" id="mM2-50-4CY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 <state key="normal" title="Runner">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="runnerButtonPressed:" destination="nWZ-cg-iS0" eventType="touchUpInside" id="vy2-sr-dhF"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TfP-r9-WUO" firstAttribute="leading" secondItem="va2-uy-J44" secondAttribute="leading" id="47p-hG-I8R"/>
                             <constraint firstItem="TfP-r9-WUO" firstAttribute="top" secondItem="eMQ-x7-NiK" secondAttribute="bottom" constant="12" id="5Kq-24-161"/>
@@ -563,21 +650,33 @@ Coaches &amp; Timekeepers</string>
                         <viewLayoutGuide key="safeArea" id="va2-uy-J44"/>
                     </view>
                     <connections>
-                        <segue destination="eq7-UA-swb" kind="show" id="7hT-DN-xht"/>
+                        <outlet property="CoachingButton" destination="cZC-xg-n1o" id="t1p-g5-0Hn"/>
+                        <segue destination="Bsc-Mo-YTN" kind="show" identifier="createTeamSegue" id="Zl9-ve-cG7"/>
+                        <segue destination="eq7-UA-swb" kind="show" identifier="findTeamSegue" id="hTx-PV-jbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSC-NO-gt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60" y="-43"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--CC Runner-->
         <scene sceneID="8pF-GO-1nd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GiI-Om-6sh" sceneMemberID="viewController">
+                <navigationController title="CC Runner" automaticallyAdjustsScrollViewInsets="NO" id="GiI-Om-6sh" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rLz-YB-5sB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="rLz-YB-5sB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -588,10 +687,10 @@ Coaches &amp; Timekeepers</string>
             </objects>
             <point key="canvasLocation" x="-2486" y="-825"/>
         </scene>
-        <!--View Controller-->
+        <!--Find Your Team View Controller-->
         <scene sceneID="GJJ-Tq-yVc">
             <objects>
-                <viewController id="eq7-UA-swb" sceneMemberID="viewController">
+                <viewController id="eq7-UA-swb" customClass="FindYourTeamViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qjX-pN-bjT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -603,7 +702,7 @@ Coaches &amp; Timekeepers</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="coY-CG-mCd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Organization Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tH-kk-XVT">
@@ -615,7 +714,7 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Postal Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-lm-ztP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Postal Code *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-lm-ztP">
                                 <rect key="frame" x="10" y="273" width="356" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -629,7 +728,7 @@ Coaches &amp; Timekeepers</string>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ulv-4Z-aQY"/>
-                                    <constraint firstAttribute="width" constant="356" id="mDq-uf-Osv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="356" id="mDq-uf-Osv"/>
                                 </constraints>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -643,72 +742,206 @@ Coaches &amp; Timekeepers</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Season" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-Dw-uxt">
-                                <rect key="frame" x="10" y="400" width="356" height="40"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L57-2H-zBN" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="240" y="464" width="115" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="2Mr-KN-8xK"/>
-                                    <constraint firstAttribute="height" constant="40" id="VZY-ZA-ukR"/>
+                                    <constraint firstAttribute="height" constant="40" id="qam-k9-VIh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="tE4-34-Xpm"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L57-2H-zBN">
-                                <rect key="frame" x="240" y="464" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                <state key="normal" title="Create Team">
-                                    <color key="titleColor" red="0.2618662672" green="0.3847410443" blue="0.30196702850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Find Team">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findTeamButtonPressed:" destination="eq7-UA-swb" eventType="touchUpInside" id="LBd-Vj-Obe"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Team Name / Mascot" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-y3-BHx">
-                                <rect key="frame" x="10" y="208" width="356" height="40"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* are required fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbQ-lT-oHG">
+                                <rect key="frame" x="10" y="403" width="131" height="13.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="YQA-H2-TVm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="0jM-hY-TJR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="aMT-K7-pEE"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="GR1-mk-Tie" secondAttribute="trailing" constant="9" id="00C-Ch-64Y"/>
-                            <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="wIv-y3-BHx" secondAttribute="trailing" constant="9" id="2CL-6g-9Qv"/>
+                            <constraint firstItem="L57-2H-zBN" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="240" id="0b4-A1-7sh"/>
                             <constraint firstItem="cbH-d4-McL" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="16" id="3zH-Ga-4eD"/>
-                            <constraint firstItem="zgS-Av-b0A" firstAttribute="top" secondItem="Yrm-lm-ztP" secondAttribute="bottom" constant="1" id="Acj-mh-mcC"/>
                             <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="9tH-kk-XVT" secondAttribute="trailing" constant="9" id="AtX-cL-RSV"/>
-                            <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="xwS-Dw-uxt" secondAttribute="trailing" constant="9" id="C77-UB-k4l"/>
+                            <constraint firstItem="L57-2H-zBN" firstAttribute="top" secondItem="GR1-mk-Tie" secondAttribute="bottom" constant="69" id="BQy-in-atu"/>
                             <constraint firstItem="GR1-mk-Tie" firstAttribute="top" secondItem="zgS-Av-b0A" secondAttribute="bottom" constant="1" id="FxX-aP-fhY"/>
                             <constraint firstItem="GR1-mk-Tie" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="O6a-rn-0P4"/>
                             <constraint firstItem="zgS-Av-b0A" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="OoJ-G3-oPb"/>
-                            <constraint firstItem="zgS-Av-b0A" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="TQ6-e2-Pm4"/>
-                            <constraint firstItem="wIv-y3-BHx" firstAttribute="top" secondItem="9tH-kk-XVT" secondAttribute="bottom" constant="1" id="aDF-qh-eHd"/>
+                            <constraint firstItem="Yrm-lm-ztP" firstAttribute="top" secondItem="9tH-kk-XVT" secondAttribute="bottom" constant="66" id="PWe-QX-jD2"/>
                             <constraint firstItem="cbH-d4-McL" firstAttribute="top" secondItem="jeU-iV-PZu" secondAttribute="top" constant="43" id="dPs-ft-fJM"/>
                             <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="zgS-Av-b0A" secondAttribute="trailing" constant="9" id="dX4-Y7-EEO"/>
-                            <constraint firstItem="Yrm-lm-ztP" firstAttribute="top" secondItem="wIv-y3-BHx" secondAttribute="bottom" constant="25" id="gTt-9w-xqE"/>
-                            <constraint firstItem="wIv-y3-BHx" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="i2R-c6-bZ3"/>
                             <constraint firstItem="jeU-iV-PZu" firstAttribute="trailing" secondItem="Yrm-lm-ztP" secondAttribute="trailing" constant="9" id="jFG-CM-nGV"/>
-                            <constraint firstItem="xwS-Dw-uxt" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="mBH-cW-7OS"/>
                             <constraint firstItem="zgS-Av-b0A" firstAttribute="top" secondItem="Yrm-lm-ztP" secondAttribute="bottom" constant="1" id="mgt-lQ-t59"/>
-                            <constraint firstItem="wIv-y3-BHx" firstAttribute="top" secondItem="9tH-kk-XVT" secondAttribute="bottom" constant="1" id="p44-zJ-dOq"/>
-                            <constraint firstItem="xwS-Dw-uxt" firstAttribute="top" secondItem="GR1-mk-Tie" secondAttribute="bottom" constant="5" id="s8r-i1-Fed"/>
-                            <constraint firstItem="Yrm-lm-ztP" firstAttribute="top" secondItem="wIv-y3-BHx" secondAttribute="bottom" constant="25" id="toq-VV-bWR"/>
-                            <constraint firstItem="zgS-Av-b0A" firstAttribute="top" secondItem="Yrm-lm-ztP" secondAttribute="bottom" constant="1" id="wpi-DF-qCC"/>
+                            <constraint firstItem="NbQ-lT-oHG" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="oeH-XA-CUn"/>
+                            <constraint firstItem="NbQ-lT-oHG" firstAttribute="top" secondItem="GR1-mk-Tie" secondAttribute="bottom" constant="8" id="qo0-s1-jxH"/>
                             <constraint firstItem="9tH-kk-XVT" firstAttribute="top" secondItem="cbH-d4-McL" secondAttribute="bottom" constant="35" id="wvI-Zc-EX9"/>
                             <constraint firstItem="Yrm-lm-ztP" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="xtW-0Z-kHM"/>
                             <constraint firstItem="9tH-kk-XVT" firstAttribute="leading" secondItem="jeU-iV-PZu" secondAttribute="leading" constant="10" id="y92-dL-RxD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jeU-iV-PZu"/>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="zgS-Av-b0A" id="5NF-ra-a20"/>
+                        <outlet property="organizationField" destination="9tH-kk-XVT" id="PLx-Qi-dlZ"/>
+                        <outlet property="postalCodeField" destination="Yrm-lm-ztP" id="QIW-Ij-kKX"/>
+                        <outlet property="stateField" destination="GR1-mk-Tie" id="jIu-hk-27K"/>
+                        <segue destination="tXY-dd-RgL" kind="show" identifier="showTeamsFoundSegue" id="lHW-HQ-uah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7A-Gn-82M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="714"/>
+            <point key="canvasLocation" x="1172" y="740"/>
+        </scene>
+        <!--Teams Found View Controller-->
+        <scene sceneID="4hX-2H-OPw">
+            <objects>
+                <tableViewController id="tXY-dd-RgL" customClass="TeamsFoundViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="22" sectionFooterHeight="28" id="MTs-1m-uBd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foundTeam" id="DqA-Yb-LBc" customClass="FoundTeamCell" customModule="teamDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DqA-Yb-LBc" id="ODm-Cb-xIs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3N-JW-GVU">
+                                            <rect key="frame" x="16" y="0.0" width="280" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="K5u-Gj-Ih2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBR-RA-Gje">
+                                            <rect key="frame" x="20" y="41" width="150" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="vPj-sj-TNW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-Vv-YN0">
+                                            <rect key="frame" x="184" y="41" width="40" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="axK-e8-KJg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44050" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZY-Og-oOj">
+                                            <rect key="frame" x="232" y="41" width="45" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="ZaQ-lG-tKR"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="ifh-le-zRs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOd-Rm-uwi">
+                                            <rect key="frame" x="16" y="22" width="100" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="K0E-0S-xeW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y3N-JW-GVU" firstAttribute="top" secondItem="ODm-Cb-xIs" secondAttribute="top" id="1iW-ef-Qzf"/>
+                                        <constraint firstItem="JOd-Rm-uwi" firstAttribute="leading" secondItem="ODm-Cb-xIs" secondAttribute="leadingMargin" id="1wM-fZ-nDQ"/>
+                                        <constraint firstItem="ioh-Vv-YN0" firstAttribute="top" secondItem="y3N-JW-GVU" secondAttribute="bottom" constant="22" id="3D4-7L-J0e"/>
+                                        <constraint firstItem="JOd-Rm-uwi" firstAttribute="top" secondItem="ODm-Cb-xIs" secondAttribute="topMargin" constant="11" id="6tg-mV-sIG"/>
+                                        <constraint firstItem="YBR-RA-Gje" firstAttribute="leading" secondItem="ODm-Cb-xIs" secondAttribute="leading" constant="20" id="8QV-jR-jVg"/>
+                                        <constraint firstItem="YBR-RA-Gje" firstAttribute="top" secondItem="y3N-JW-GVU" secondAttribute="bottom" constant="22" id="TQx-LK-Nnw"/>
+                                        <constraint firstItem="y3N-JW-GVU" firstAttribute="leading" secondItem="ODm-Cb-xIs" secondAttribute="leading" constant="16" id="WJ3-Dx-qfa"/>
+                                        <constraint firstItem="ioh-Vv-YN0" firstAttribute="leading" secondItem="YBR-RA-Gje" secondAttribute="trailing" constant="14" id="ZkW-0U-tdT"/>
+                                        <constraint firstItem="4ZY-Og-oOj" firstAttribute="leading" secondItem="ioh-Vv-YN0" secondAttribute="trailing" constant="8" id="ce1-QE-jDg"/>
+                                        <constraint firstItem="4ZY-Og-oOj" firstAttribute="top" secondItem="y3N-JW-GVU" secondAttribute="bottom" constant="22" id="pdD-F0-lwJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityLabel" destination="YBR-RA-Gje" id="l0Y-Id-ZlY"/>
+                                    <outlet property="mascotLabel" destination="JOd-Rm-uwi" id="BzL-a5-8KN"/>
+                                    <outlet property="organizationLabel" destination="y3N-JW-GVU" id="yn2-Ft-gQZ"/>
+                                    <outlet property="stateLabel" destination="ioh-Vv-YN0" id="1Si-6Z-J7h"/>
+                                    <outlet property="zipcodeLabel" destination="4ZY-Og-oOj" id="79S-I8-EGX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tXY-dd-RgL" id="IDb-m9-Lhr"/>
+                            <outlet property="delegate" destination="tXY-dd-RgL" id="woR-gd-Vsp"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="foundTeamTable" destination="MTs-1m-uBd" id="zif-3j-wp8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLe-ng-NbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-yE-OqI" customClass="DesignableButton" customModule="teamDB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="HDw-G1-VkW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                    <state key="normal" title=" Create Team ">
+                        <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="createTeamButtonPressed:" destination="Bsc-Mo-YTN" eventType="touchUpInside" id="S0H-8Z-YO1"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="1927" y="686"/>
         </scene>
     </scenes>
     <resources>
         <image name="Camryn Finishing" width="444" height="412"/>
     </resources>
-    <color key="tintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <inferredMetricsTieBreakers>
+        <segue reference="hTx-PV-jbu"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
