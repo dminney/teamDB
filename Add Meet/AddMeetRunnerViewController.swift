@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class AddMeetRunnerViewController: UITableViewController {
     var ref: DatabaseReference!
-    var eventData = EventInfoModel(id: 0)
+    var eventData : EventDataModel?
     var runnershown = AddRunnerCellModel(id:0)
     var runnerid = " "
    
@@ -26,31 +26,31 @@ class AddMeetRunnerViewController: UITableViewController {
     
     @IBAction func SaveButtonPressed(_ sender: Any) {
         var i : Int = 0
-        while i < eventRunnerlist.count {
-            if eventRunnerlist[i].competing {
-                let meetid =  eventData.meet
-                let eventid = eventData.onlineid
-                let competitor = ResultsModel(id: Int64(i), eventid: eventid!, runnerid: eventRunnerlist[i].online_id, mile1time: 0, mile2time: 0, finaltime: 0, meetid: meetid!)
-                let runnerupdate : Dictionary = ["runnerid":eventRunnerlist[i].online_id, "meet":meetid,"event":eventid, "mile1":"00:00:00", "mile2": "00:00:00", "final":"00:00:00"] as [String : AnyObject]
-                
-                let resultRef = ref?.child("Result").childByAutoId()
-                resultRef?.setValue(runnerupdate)
-                // To do:
-                // Do we need the id of the result ?????
-                // let resultid = resultRef?.key
-                
-                if eventRunnerlist[i].exists {
-                    let id = DBAccessor.sharedInstance.updateResult(resultid: eventRunnerlist[i].id!, newResult: competitor)
-                } else {
-                    if let id = DBAccessor.sharedInstance.addResult(resultEventID: eventid!, resultRunnerID: eventRunnerlist[i].online_id, resultMile1Time: 0, resultMile2Time: 0, resultFinalTime: 0, resultmeetid: meetid!){
-                    }
-                }
-            
-            } else {
-                if eventRunnerlist[i].exists { let id = DBAccessor.sharedInstance.deleteResult(resultid: eventRunnerlist[i].results_id!) }
-            }
-            i += 1
-        }
+//        while i < eventRunnerlist.count {
+//            if eventRunnerlist[i].competing {
+//                let meetid =  eventData.meet
+//                let eventid = eventData.onlineid
+//                let competitor = ResultsModel(id: Int64(i), eventid: eventid!, runnerid: eventRunnerlist[i].online_id, mile1time: 0, mile2time: 0, finaltime: 0, meetid: meetid!)
+//                let runnerupdate : Dictionary = ["runnerid":eventRunnerlist[i].online_id, "meet":meetid,"event":eventid, "mile1":"00:00:00", "mile2": "00:00:00", "final":"00:00:00"] as [String : AnyObject]
+//
+//                let resultRef = ref?.child("Result").childByAutoId()
+//                resultRef?.setValue(runnerupdate)
+//                // To do:
+//                // Do we need the id of the result ?????
+//                // let resultid = resultRef?.key
+//
+//                if eventRunnerlist[i].exists {
+//                    let id = DBAccessor.sharedInstance.updateResult(resultid: eventRunnerlist[i].id!, newResult: competitor)
+//                } else {
+//                    if let id = DBAccessor.sharedInstance.addResult(resultEventID: eventid!, resultRunnerID: eventRunnerlist[i].online_id, resultMile1Time: 0, resultMile2Time: 0, resultFinalTime: 0, resultmeetid: meetid!){
+//                    }
+//                }
+//
+//            } else {
+//                if eventRunnerlist[i].exists { let id = DBAccessor.sharedInstance.deleteResult(resultid: eventRunnerlist[i].results_id!) }
+//            }
+//            i += 1
+//        }
       navigationController?.popViewController(animated: true)
     }
     
@@ -59,8 +59,8 @@ class AddMeetRunnerViewController: UITableViewController {
         
         var runnerlist = [RunnerInfoModel]()
         var resultlist = [ResultsModel]()
-        runnerlist = DBAccessor.sharedInstance.getAvailableRunners(gender: eventData.gender, grade: eventData.grade)
-        resultlist = DBAccessor.sharedInstance.getEventRunners(eventid: eventData.onlineid)
+ //       runnerlist = DBAccessor.sharedInstance.getAvailableRunners(gender: eventData.gender, grade: eventData.grade)
+  //      resultlist = DBAccessor.sharedInstance.getEventRunners(eventid: eventData.onlineid)
         
 //         let eventid = eventData.id
 //            let resultRef = ref.child("Result").queryOrdered(byChild: "event").queryEqual(toValue: eventid)
@@ -105,7 +105,7 @@ class AddMeetRunnerViewController: UITableViewController {
         runnerTableView.dataSource = self
         
         fillDataModel()
-        eventTitleLabel.text = eventData.team
+        eventTitleLabel.text = eventData?.team
     }
 
     

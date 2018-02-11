@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GO6-Hi-uUW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GO6-Hi-uUW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
         <!--Add Meet-->
         <scene sceneID="6g1-nd-1ic">
             <objects>
-                <viewController storyboardIdentifier="AddMeetViewController" autoresizesArchivedViewToFullSize="NO" title="Add Meet" modalPresentationStyle="currentContext" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WiK-V8-qB1" customClass="AddMeetViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMeetViewController" autoresizesArchivedViewToFullSize="NO" title="Add Meet" modalPresentationStyle="currentContext" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WiK-V8-qB1" customClass="AddMeetViewController" customModule="CC_Runner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSR-a6-I3d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,10 +64,6 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
                             </textField>
-                            <pickerView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-L1-Bhu">
-                                <rect key="frame" x="16" y="117" width="343" height="216"/>
-                                <color key="backgroundColor" red="0.32549019607843138" green="0.1063579395" blue="0.574860394" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pkn-ep-Wel">
                                 <rect key="frame" x="254" y="211" width="105" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,6 +76,10 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
                             </textField>
+                            <pickerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-L1-Bhu">
+                                <rect key="frame" x="16" y="333" width="343" height="0.0"/>
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.1063579395" blue="0.574860394" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-UU-sWm">
                                 <rect key="frame" x="16" y="341" width="343" height="259"/>
                                 <subviews>
@@ -92,7 +93,7 @@
                                         <color key="separatorColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexBackgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationLevel="1" indentationWidth="10" reuseIdentifier="eventCell" editingAccessoryType="detailButton" textLabel="ReX-Ed-TOX" detailTextLabel="UxX-ki-eup" style="IBUITableViewCellStyleValue1" id="9eM-0p-3f9" customClass="EventCell" customModule="teamDB" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationLevel="1" indentationWidth="10" reuseIdentifier="eventCell" editingAccessoryType="detailButton" textLabel="ReX-Ed-TOX" detailTextLabel="UxX-ki-eup" style="IBUITableViewCellStyleValue1" id="9eM-0p-3f9" customClass="EventCell" customModule="CC_Runner" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55.5" width="343" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9eM-0p-3f9" id="7Kl-4y-5H4">
@@ -166,7 +167,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCj-yj-q5j">
-                                <rect key="frame" x="186" y="211" width="59.5" height="40"/>
+                                <rect key="frame" x="186" y="211" width="60" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="aGV-0g-dV9"/>
@@ -192,16 +193,18 @@
                             <constraint firstItem="JuR-2T-ehf" firstAttribute="top" secondItem="o4E-iO-ki1" secondAttribute="bottom" constant="2" id="0rY-Yb-UCe"/>
                             <constraint firstItem="UHI-At-YEv" firstAttribute="top" secondItem="D93-2w-6iF" secondAttribute="bottom" constant="8" symbolic="YES" id="19t-il-kx7"/>
                             <constraint firstItem="UHI-At-YEv" firstAttribute="leading" secondItem="o4E-iO-ki1" secondAttribute="leading" id="3LY-Sr-fXs"/>
-                            <constraint firstItem="jfs-UU-sWm" firstAttribute="top" secondItem="hy6-L1-Bhu" secondAttribute="bottom" constant="8" id="5DO-FN-pPC"/>
                             <constraint firstItem="D93-2w-6iF" firstAttribute="trailing" secondItem="UHI-At-YEv" secondAttribute="trailing" id="6UG-Ah-Ndx"/>
                             <constraint firstItem="jfs-UU-sWm" firstAttribute="top" secondItem="Psl-YG-8DG" secondAttribute="bottom" constant="8" id="6ZP-zw-UDs"/>
                             <constraint firstItem="Pkn-ep-Wel" firstAttribute="leading" secondItem="fCj-yj-q5j" secondAttribute="trailing" constant="8" id="7be-gD-Kk3"/>
                             <constraint firstItem="Wpg-yl-njN" firstAttribute="baseline" secondItem="Pkn-ep-Wel" secondAttribute="baseline" id="8ve-y4-DHR"/>
+                            <constraint firstAttribute="trailing" secondItem="hy6-L1-Bhu" secondAttribute="trailing" constant="16" id="9gO-9N-WkI"/>
                             <constraint firstItem="o4E-iO-ki1" firstAttribute="top" secondItem="UHI-At-YEv" secondAttribute="bottom" constant="52" id="FDv-sO-TEq"/>
                             <constraint firstItem="fCj-yj-q5j" firstAttribute="leading" secondItem="Wpg-yl-njN" secondAttribute="trailing" constant="8" id="IQa-pb-Z4l"/>
                             <constraint firstItem="TS5-ye-Z1A" firstAttribute="trailing" secondItem="N53-pz-aHZ" secondAttribute="trailing" id="J4z-id-KIQ"/>
+                            <constraint firstItem="hy6-L1-Bhu" firstAttribute="top" secondItem="JuR-2T-ehf" secondAttribute="bottom" id="Onp-Rw-zWo"/>
                             <constraint firstItem="TS5-ye-Z1A" firstAttribute="trailing" secondItem="Pkn-ep-Wel" secondAttribute="trailing" constant="16" id="RjX-kZ-tQW"/>
                             <constraint firstItem="N53-pz-aHZ" firstAttribute="leading" secondItem="uSR-a6-I3d" secondAttribute="leadingMargin" constant="-16" id="S87-YG-onM"/>
+                            <constraint firstItem="hy6-L1-Bhu" firstAttribute="bottom" secondItem="JuR-2T-ehf" secondAttribute="bottom" id="U4X-vH-EcT"/>
                             <constraint firstItem="Psl-YG-8DG" firstAttribute="top" secondItem="o4E-iO-ki1" secondAttribute="bottom" constant="2" id="UaS-ll-c9e"/>
                             <constraint firstItem="Wpg-yl-njN" firstAttribute="baseline" secondItem="fCj-yj-q5j" secondAttribute="baseline" id="VTl-tp-CzS"/>
                             <constraint firstItem="JuR-2T-ehf" firstAttribute="leading" secondItem="jfs-UU-sWm" secondAttribute="leading" id="Xnf-94-HHJ"/>
@@ -211,6 +214,7 @@
                             <constraint firstItem="D93-2w-6iF" firstAttribute="leading" secondItem="UHI-At-YEv" secondAttribute="leading" id="auf-r9-cUB"/>
                             <constraint firstItem="TS5-ye-Z1A" firstAttribute="trailing" secondItem="jfs-UU-sWm" secondAttribute="trailing" constant="16" id="cCs-Ic-wVp"/>
                             <constraint firstItem="fCj-yj-q5j" firstAttribute="top" secondItem="UHI-At-YEv" secondAttribute="bottom" constant="4" id="dhz-dn-uAa"/>
+                            <constraint firstItem="hy6-L1-Bhu" firstAttribute="leading" secondItem="uSR-a6-I3d" secondAttribute="leading" constant="16" id="hIZ-ER-YZV"/>
                             <constraint firstItem="TS5-ye-Z1A" firstAttribute="trailing" secondItem="Psl-YG-8DG" secondAttribute="trailing" constant="29" id="hfw-ee-FmY"/>
                             <constraint firstItem="o4E-iO-ki1" firstAttribute="leading" secondItem="TS5-ye-Z1A" secondAttribute="leading" constant="16" id="iL1-NN-e0H"/>
                             <constraint firstItem="TS5-ye-Z1A" firstAttribute="trailing" secondItem="UHI-At-YEv" secondAttribute="trailing" constant="16" id="mBi-Io-5wV"/>
@@ -245,7 +249,7 @@
         <!--Add Event-->
         <scene sceneID="5v8-4x-THt">
             <objects>
-                <viewController title="Add Event" id="Tzl-af-72v" customClass="AddEventViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Event" id="Tzl-af-72v" customClass="AddEventViewController" customModule="CC_Runner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MsB-fU-Icg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,7 +377,7 @@
         <!--Select Runners-->
         <scene sceneID="dex-xU-5R5">
             <objects>
-                <tableViewController title="Select Runners" id="KvZ-om-fow" customClass="AddMeetRunnerViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Select Runners" id="KvZ-om-fow" customClass="AddMeetRunnerViewController" customModule="CC_Runner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NTw-hF-wGc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,7 +393,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddRunnerCell" id="vdY-ev-F4h" customClass="AddRunnerCell" customModule="teamDB" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddRunnerCell" id="vdY-ev-F4h" customClass="AddRunnerCell" customModule="CC_Runner" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdY-ev-F4h" id="3SP-wO-L6g">
@@ -451,7 +455,7 @@
         <!--Meet Table View Controller-->
         <scene sceneID="Oeg-ep-XbG">
             <objects>
-                <viewController id="Wpe-oW-s4k" customClass="MeetTableViewController" customModule="teamDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wpe-oW-s4k" customClass="MeetTableViewController" customModule="CC_Runner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vud-bZ-rem">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +468,7 @@
                                     <constraint firstAttribute="height" constant="412" id="2j6-DU-rmG"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MeetTableCell" editingAccessoryType="disclosureIndicator" id="hD4-8A-vjQ" customClass="MeetCell" customModule="teamDB" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MeetTableCell" editingAccessoryType="disclosureIndicator" id="hD4-8A-vjQ" customClass="MeetCell" customModule="CC_Runner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20" width="343" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hD4-8A-vjQ" id="juB-B6-72x">
@@ -529,11 +533,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yNF-j1-ZXV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lxr-qM-jpU"/>
+                    <navigationItem key="navigationItem" id="lxr-qM-jpU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B0E-PZ-gQP">
+                            <connections>
+                                <segue destination="WiK-V8-qB1" kind="show" identifier="AddMeetSegue" id="EUI-wd-4Lr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="meetTableView" destination="WF2-gh-36Y" id="Ce6-He-9P8"/>
                         <segue destination="WiK-V8-qB1" kind="show" identifier="EditMeetView" id="x4r-vr-S60"/>
-                        <segue destination="WiK-V8-qB1" kind="show" identifier="AddMeetSegue" id="XJ7-zq-kUS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqE-hY-yeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,7 +573,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AoO-uy-xaQ"/>
-        <segue reference="XJ7-zq-kUS"/>
+        <segue reference="EUI-wd-4Lr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

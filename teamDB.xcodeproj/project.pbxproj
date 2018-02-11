@@ -38,6 +38,8 @@
 		A93EA8EA202155290098A0F2 /* AddMeetTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8E9202155290098A0F2 /* AddMeetTabViewController.swift */; };
 		A93EA8EC202157260098A0F2 /* RunnersTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8EB202157260098A0F2 /* RunnersTabViewController.swift */; };
 		A93EA8EE202157EF0098A0F2 /* ResultsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93EA8ED202157EF0098A0F2 /* ResultsTabViewController.swift */; };
+		A94093AE202D35B300D715BD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94093AD202D35B300D715BD /* Realm.framework */; };
+		A94093AF202D35B300D715BD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A94093AD202D35B300D715BD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9426ACC201E5A0900A56147 /* MeetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426ACB201E5A0900A56147 /* MeetDetailViewController.swift */; };
 		A9426AD4201EB8B800A56147 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426AD3201EB8B800A56147 /* EventList.swift */; };
 		A9426AD6201EC71B00A56147 /* EventRunnerChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9426AD5201EC71B00A56147 /* EventRunnerChoiceController.swift */; };
@@ -153,6 +155,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A94093AF202D35B300D715BD /* Realm.framework in Embed Frameworks */,
 				A9EDAA8B20000155005266E4 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -202,6 +205,8 @@
 		A93EA8E9202155290098A0F2 /* AddMeetTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetTabViewController.swift; sourceTree = "<group>"; };
 		A93EA8EB202157260098A0F2 /* RunnersTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnersTabViewController.swift; sourceTree = "<group>"; };
 		A93EA8ED202157EF0098A0F2 /* ResultsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTabViewController.swift; sourceTree = "<group>"; };
+		A94093A4202D356C00D715BD /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94093AD202D35B300D715BD /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9426ACB201E5A0900A56147 /* MeetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetDetailViewController.swift; sourceTree = "<group>"; };
 		A9426AD3201EB8B800A56147 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		A9426AD5201EC71B00A56147 /* EventRunnerChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRunnerChoiceController.swift; sourceTree = "<group>"; };
@@ -245,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94093AE202D35B300D715BD /* Realm.framework in Frameworks */,
 				393D9EFB41B5398EFCC90083 /* Pods_teamDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +277,8 @@
 		A936B0801F8BF4AF00F17D62 = {
 			isa = PBXGroup;
 			children = (
+				A94093AD202D35B300D715BD /* Realm.framework */,
+				A94093A4202D356C00D715BD /* RealmSwift.framework */,
 				A9EDAA711FFFFE30005266E4 /* SQLite.xcodeproj */,
 				A936B08B1F8BF4AF00F17D62 /* teamDB */,
 				A97306B21FEC41DE00BA5DA3 /* Designables */,

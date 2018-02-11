@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import RealmSwift
 
 protocol DataSentDelegate {
     
@@ -33,14 +34,13 @@ class EventCell : UITableViewCell {
 class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate {
  
     
-    
     var delegate : DataSentDelegate? = nil
     var meetid : Int64?
     var meetonlineid : String = ""
     var selectedrow : Int = 0
-    var eventList = [EventInfoModel]()
+    var eventList  : Results<EventDataModel>!
     var appstate : StateController!
-    var oldMeets = [MeetModel]()
+    var oldMeets = [MeetDataModel]()
    // let meetpicker = UIPickerView()
     
     @IBOutlet weak var titleLabel: UITextField!
@@ -55,8 +55,13 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var ref: DatabaseReference!
     let picker = UIDatePicker()
-    var meetinfo = MeetModel(id:0)
-    var eventinfo = EventInfoModel(id:0)
+    var meetinfo : MeetDataModel?{
+       didSet {
+      //  configureCells()
+        print("meetinfo Set")
+        }
+    }
+    var eventinfo : EventDataModel?
     var eventRowSelected = false
     
     override func viewDidLoad() {
@@ -66,19 +71,22 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         meetpicker.delegate = self
         meetpicker.dataSource = self
         appstate = (tabBarController as! CustomTabbarController).appState!
-      
-        ref = Database.database().reference()
         createDatePicker()
+        configureCells()
         // Initial Setup of Default Text Labels
-        oldMeets = DBAccessor.sharedInstance.getMeets()
-        titleLabel.text = meetinfo.name
-        locationLabel.text = meetinfo.address
-        cityLabel.text = meetinfo.city
-        stateLabel.text = meetinfo.state
-        zipCodeLabel.text = String(meetinfo.zipcode)
-        dateLabel.text = meetinfo.date
-        meetonlineid = meetinfo.onlineid
+       // oldMeets = DBAccessor.sharedInstance.getMeets()
        
+       
+    }
+    func configureCells(){
+        
+        titleLabel.text = meetinfo?.name
+        locationLabel.text = meetinfo?.address
+        cityLabel.text = meetinfo?.city
+        stateLabel.text = meetinfo?.state
+        zipCodeLabel.text = meetinfo?.zipcodeString()
+        dateLabel.text = meetinfo?.date
+        // meetonlineid = meetinfo.onlineid
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -125,7 +133,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventList.count
+        return eventList?.count ?? 0
         
     }
 
@@ -133,8 +141,8 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = EventTableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventCell
         eventinfo = self.eventList[indexPath.row]
-        let eventName = eventinfo.name
-        let eventTime = eventinfo.time
+        let eventName = eventinfo?.name
+        let eventTime = eventinfo?.time
         cell.eventTitle.text = eventName
         cell.eventTimeLabel.text = eventTime
 
@@ -160,7 +168,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
          if editingStyle == .delete {
-            if let event_id = self.eventList[indexPath.row].id {
+          //  if let event_id = self.eventList[indexPath.row].id {
                 
 //                ref?.child("Event").child(event_id).removeValue(completionBlock: { (error,ref) in
 //                    if error != nil {
@@ -171,7 +179,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
 //                    }
 //                    }
 //                    )
-            }
+   //        }
         }
     }
     
@@ -190,9 +198,11 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func attemptReloadofTableView(){
-        eventList.removeAll()
-         if meetonlineid != "" {
-            eventList = DBAccessor.sharedInstance.getEvents(meetid: meetonlineid)}
+       // eventList.removeAll
+        // if meetonlineid != "" {
+         //   eventList = DBAccessor.sharedInstance.getEvents(meetid: meetonlineid)}
+        
+        eventList = meetinfo?.events.sorted(byKeyPath: "name", ascending: true)
         
         EventTableView.reloadData()
 //        let eventRef = ref.child("Event").queryOrdered(byChild: "meet").queryEqual(toValue: meetid)
@@ -207,8 +217,8 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
 //                }
 //            }
 //            self.EventTableView.reloadData()
-//        })
-        
+//        /})
+       // }
     }
     
     
@@ -226,31 +236,37 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
             dateLabel.layer.borderColor = UIColor.red.cgColor
             return
         }
-        
+        if (zipCodeLabel.text?.isEmpty)!{
+            zipCodeLabel.text = String(0)
+        }
         let name = titleLabel.text
         let location = locationLabel.text
         let datetext = dateLabel.text
         let citytext = cityLabel.text
         let statetext = stateLabel.text
         let ziptext = zipCodeLabel.text
-        let newmeet : Dictionary = ["name":name!, "location":location!,"date":datetext!,"city":citytext,"state":statetext, "zipcode":ziptext] as [String : AnyObject]
+    //    let newmeet : Dictionary = ["name":name!, "location":location!,"date":datetext!,"city":citytext,"state":statetext, "zipcode":ziptext] as [String : AnyObject]
         
+    
         if meetonlineid != "" {
-            ref?.child("Meet").child(meetonlineid).setValue(newmeet)
-             let datestring = "\(Date(timeIntervalSince1970: 0))"
-            let updatedMeet = MeetModel(id: self.meetid!, name: name!, onlineid: meetonlineid, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!, updated_at: datestring)
-            if DBAccessor.sharedInstance.updateMeet(meetid: self.meetid!, newMeet: updatedMeet) != false {
+           // ref?.child("Meet").child(meetonlineid).setValue(newmeet)
+         //    let datestring = "\(Date(timeIntervalSince1970: 0))"
+            let updatedMeet = MeetDataModel(name: name!, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!)
+            updatedMeet.writeToRealm()
+            meetinfo = updatedMeet
             navigationController?.popViewController(animated: true)
-            }
+
         } else {
-            let meetRef = ref.child("Meet").childByAutoId()
-            meetRef.setValue(newmeet)
-            meetonlineid = meetRef.key
-            if DBAccessor.sharedInstance.addMeet(meetname: name!, meetid: meetonlineid, meetdate: datetext!, meetaddress: location!,meetcity: citytext!, meetstate: statetext!,meetzipcode: Int(ziptext!)!) != nil{
+//            let meetRef = ref.child("Meet").childByAutoId()
+//            meetRef.setValue(newmeet)
+            let updatedMeet = MeetDataModel(name: name!, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!)
+            updatedMeet.writeToRealm()
+            meetonlineid = updatedMeet.idKey
+            meetinfo = updatedMeet
+           // if DBAccessor.sharedInstance.addMeet(meetname: name!, meetid: meetonlineid, meetdate: datetext!, meetaddress: location!,meetcity: citytext!, meetstate: statetext!,meetzipcode: Int(ziptext!)!) != nil{
             navigationController?.popViewController(animated: true)
                 }
-            
-        }
+        
      
     }
     
@@ -280,7 +296,8 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         picker.datePickerMode = .date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm a"
-        if let date = dateFormatter.date(from: eventinfo.time) {
+        let eventTime = eventinfo?.time ?? "12:00 a"
+        if let date = dateFormatter.date(from: (eventTime)) {
             picker.date = date
         }
 
@@ -309,10 +326,10 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
             // Get the new view controller using segue.destinationViewController.
             // Pass the meet online id to the new view controller.
             let DvC = segue.destination as! AddEventViewController
-            DvC.meetonlineid = meetonlineid
+            DvC.currentMeet = meetinfo
         } else if segue.identifier == "editEventSegue" {
             let DvC = segue.destination as! AddEventViewController
-            DvC.meetonlineid = meetonlineid
+            DvC.currentMeet = meetinfo
             if self.eventList.count > 0 {
                 DvC.editmode = true
                 if eventRowSelected {
@@ -326,7 +343,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
             let DvC = segue.destination as! AddMeetRunnerViewController
             DvC.eventData = self.eventinfo
             }
-        self.eventList.removeAll()
+   //     self.eventList.removeAll()
         EventTableView.reloadData()
         
        

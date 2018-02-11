@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import RealmSwift
 
 
 class MeetCell : UITableViewCell {
@@ -25,9 +26,10 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     var tabBar : CustomTabbarController?
     var appState : StateController!
     var selectedrow : Int = 0
-    var meetList = [MeetModel]()
+    var meetList : Results<MeetDataModel>!
     var ref: DatabaseReference!
     var db: OpaquePointer?
+
     
      @IBOutlet var meetTableView: UITableView!
     
@@ -44,15 +46,15 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meetList.count
+       return meetList?.count ?? 1
+
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = meetTableView.dequeueReusableCell(withIdentifier: "MeetTableCell") as! MeetCell
-        let meetData = meetList[indexPath.row]
-        let meetName = meetData.name
-        let meetDate = meetData.date
+        let meetName = meetList?[indexPath.row].name ?? " No Meets Added Yet"
+        let meetDate = meetList?[indexPath.row].date ?? " "
         cell.nameLabel?.text = meetName
         cell.dateLabel?.text = meetDate
         return cell
@@ -99,7 +101,8 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
     //    meetList.removeAll()
-        meetList = DBAccessor.sharedInstance.getMeets()
+         meetList = uiRealm.objects(MeetDataModel.self)
+       // meetList = DBAccessor.sharedInstance.getMeets()
         meetTableView.reloadData()
 
     }
@@ -110,6 +113,7 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
         meetTableView.dataSource = self
         // Still need to pass which meet, event, and runner is selected between controllers using AppState
         appState = (tabBarController as! CustomTabbarController).appState!
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -133,12 +137,13 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
         else if segue.identifier == "EditMeetView"
         {
             let DvC = segue.destination as! AddMeetViewController
-            selectedrow = (self.meetTableView.indexPathForSelectedRow?.row)!
+            if let indexPath = (self.meetTableView.indexPathForSelectedRow) {
+                DvC.meetinfo = meetList?[indexPath.row]
+            }
         
             appState.currentMeet = meetList[selectedrow]
             DvC.meetinfo = meetList[selectedrow]
-            
-            DvC.meetid = meetList[selectedrow].id
+            DvC.meetonlineid = meetList[selectedrow].idKey
             DvC.selectedrow = selectedrow
          //   DvC.delegate = self
         }

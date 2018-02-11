@@ -21,11 +21,12 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var meetid = Int64()
     var gradelevel = ["High School Varsity","High School Junior Varsity","High School Open","Middle School Varsity","Middle School Junior Varsity", "Middle School Open", "Elementary"]
     var gender = ["Female", "Male"]
-    var currentEvent : EventInfoModel?
+    var currentEvent : EventDataModel?
     var ref: DatabaseReference!
     var appstate : StateController!
     var editmode = false
-    var meetonlineid = String()
+    var currentMeet : MeetDataModel?
+    //var meetonlineid = String()
     var eventonlineid = String()
     
     @IBOutlet weak var titleLabel: UITextField!
@@ -36,7 +37,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
+   //     ref = Database.database().reference()
         appstate = (tabBarController as! CustomTabbarController).appState!
         
         createDatePicker()
@@ -103,25 +104,55 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             event_genderpicked = 1
         }
 
-        let newEvent : Dictionary = ["name":event_name!, "time":event_time!,"team":event_team!,"gender":event_genderpicked,"meet":meetonlineid, "grade":school] as [String : Any]
-
-        let datestring = "\(Date(timeIntervalSince1970: 0))"
+      //  let newEvent : Dictionary = ["name":event_name!, "time":event_time!,"team":event_team!,"gender":event_genderpicked,"meet":meetonlineid, "grade":school] as [String : Any]
+       
         if editmode == true {
-            let updatedEvent = EventInfoModel(id: (currentEvent?.id)!, name: event_name!, onlineid: eventonlineid, meetid:  meetonlineid, time: event_time!, team: event_team!, gender: event_genderpicked, grade: school, updated_at: datestring)
-           let Dbic = DBAccessor.sharedInstance.updateEvent(eventid: (currentEvent?.id)!, newEvent: updatedEvent)
-            if Dbic {
-                navigationController?.popViewController(animated: true)
+            if let selectedMeet = self.currentMeet {
+                let updatedEvent = EventDataModel(
+                name: event_name!,
+                gender: event_genderpicked,
+                time: event_time!,
+                team: event_team!,
+                grade: school)
+            selectedMeet.events.append(updatedEvent)
+            updatedEvent.writeToRealm()
             }
+  //     let Dbic = DBAccessor.sharedInstance.updateEvent(eventid: (currentEvent?.id)!, newEvent: updatedEvent)
+  //          if Dbic {
             
-         } else {
+            navigationController?.popViewController(animated: true)
+  //          }
             
-            let eventRef = ref.child("Event").childByAutoId()
-            eventRef.setValue(newEvent)
-            eventonlineid = eventRef.key
-           let Dbid = DBAccessor.sharedInstance.addEvent(eventname: event_name!, onlineid: eventonlineid, eventmeet: meetonlineid, eventtime: event_time!, eventteam: event_team!, eventgender: event_genderpicked, eventgrade: school)
-            if Dbid! >= 0 {
-                navigationController?.popViewController(animated: true)
+        } else {
+            if let selectedMeet = self.currentMeet {
+                
+                do {
+                    try uiRealm.write {
+                        let nowdate = Date()
+                        let datestring = "\(nowdate.timeIntervalSince1970))"
+                        let updatedEvent = EventDataModel(
+                            name: event_name!,
+                            gender: event_genderpicked,
+                            time: event_time!,
+                            team: event_team!,
+                            grade: school)
+                        updatedEvent.updated_at = datestring
+                        selectedMeet.events.append(updatedEvent)
+                        //uiRealm.add(self, update: true)
+                    }
+                } catch {
+                    print("Error saving new Event")
+                }
+                
+               // updatedEvent.writeToRealm()
             }
+          //  let eventRef = ref.child("Event").childByAutoId()
+          //  eventRef.setValue(newEvent)
+          //  eventonlineid = eventRef.key
+          //  let Dbid = DBAccessor.sharedInstance.addEvent(eventname: event_name!, onlineid: eventonlineid, eventmeet: meetonlineid, eventtime: event_time!, eventteam: event_team!, eventgender: event_genderpicked, eventgrade: school)
+           // if Dbid! >= 0 {
+                navigationController?.popViewController(animated: true)
+          //  }
         }
 
     
