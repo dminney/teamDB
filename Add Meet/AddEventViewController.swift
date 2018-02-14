@@ -107,16 +107,14 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
       //  let newEvent : Dictionary = ["name":event_name!, "time":event_time!,"team":event_team!,"gender":event_genderpicked,"meet":meetonlineid, "grade":school] as [String : Any]
        
         if editmode == true {
-            if let selectedMeet = self.currentMeet {
-                let updatedEvent = EventDataModel(
-                name: event_name!,
-                gender: event_genderpicked,
-                time: event_time!,
-                team: event_team!,
-                grade: school)
-            selectedMeet.events.append(updatedEvent)
-            updatedEvent.writeToRealm()
+            try! uiRealm.write {
+                currentEvent?.name = event_name!
+                currentEvent?.time = event_time!
+                currentEvent?.team = event_team!
+                currentEvent?.grade = school
+                currentEvent?.gender = event_genderpicked
             }
+            
   //     let Dbic = DBAccessor.sharedInstance.updateEvent(eventid: (currentEvent?.id)!, newEvent: updatedEvent)
   //          if Dbic {
             

@@ -9,11 +9,16 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-
+import RealmSwift
 
 class AddMeetRunnerViewController: UITableViewController {
     var ref: DatabaseReference!
-    var eventData : EventDataModel?
+    var eventData : EventDataModel? {
+        didSet {
+          print(eventData)
+        //    eventTitleLabel.text = eventData?.team
+        }
+    }
     var runnershown = AddRunnerCellModel(id:0)
     var runnerid = " "
    
@@ -57,8 +62,19 @@ class AddMeetRunnerViewController: UITableViewController {
 
     func fillDataModel() {
         
-        var runnerlist = [RunnerInfoModel]()
-        var resultlist = [ResultsModel]()
+        var runnerlist : Results<RunnerDataModel>!
+//        var resultlist = [ResultsModel]()
+        var resultPredicate : NSPredicate
+        let gendersort = Int((eventData?.gender)!)
+        let gradesort = eventData?.grade
+        let predicateString = "gender == \(gendersort)"
+    
+             resultPredicate = NSPredicate(format: predicateString)
+       
+        
+        
+//        let predicate = NSPredicate(format:"gender == %@ AND grade == %@", gendersort!, gradesort!)
+        runnerlist = uiRealm.objects(RunnerDataModel.self).filter(resultPredicate)
  //       runnerlist = DBAccessor.sharedInstance.getAvailableRunners(gender: eventData.gender, grade: eventData.grade)
   //      resultlist = DBAccessor.sharedInstance.getEventRunners(eventid: eventData.onlineid)
         
@@ -70,22 +86,22 @@ class AddMeetRunnerViewController: UITableViewController {
 //                    let key = snap.key as String
 //                    let runnerid = eventDict["runnerid"] as? String
                    var i : Int64 = 0
-        var j : Int = 0
+       // var j : Int = 0
             while i < runnerlist.count{
                 let x = Int(truncatingIfNeeded: i)
                         let eventRunner = AddRunnerCellModel(id:i)
-                        eventRunner.online_id = runnerlist[x].onlineid
+                  //      eventRunner.online_id = runnerlist[x].onlineid
                         eventRunner.firstname = runnerlist[x].firstname
                         eventRunner.lastname = runnerlist[x].lastname
-                    j = 0
-                       while j < resultlist.count {
-                        if resultlist[j].runnerid == runnerlist[x].onlineid {
-                            eventRunner.competing = true
-                            eventRunner.exists = true
-                            eventRunner.results_id = resultlist[j].id
-                        }
-                        j += 1
-                        }
+//                    j = 0
+//                       while j < resultlist.count {
+//                        if resultlist[j].runnerid == runnerlist[x].onlineid {
+//                            eventRunner.competing = true
+//                            eventRunner.exists = true
+//                            eventRunner.results_id = resultlist[j].id
+//                        }
+//                        j += 1
+//                        }
                         eventRunnerlist.append(eventRunner)
                         i += 1
                         }
@@ -103,9 +119,8 @@ class AddMeetRunnerViewController: UITableViewController {
         super.viewDidLoad()
         runnerTableView.delegate = self
         runnerTableView.dataSource = self
-        
-        fillDataModel()
-        eventTitleLabel.text = eventData?.team
+          fillDataModel()
+       
     }
 
     

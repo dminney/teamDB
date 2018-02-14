@@ -239,7 +239,7 @@
                         <outlet property="stateLabel" destination="fCj-yj-q5j" id="kOC-U4-SwT"/>
                         <outlet property="titleLabel" destination="D93-2w-6iF" id="RQZ-m7-4nO"/>
                         <outlet property="zipCodeLabel" destination="Pkn-ep-Wel" id="eTR-vy-a7t"/>
-                        <segue destination="KvZ-om-fow" kind="show" identifier="addRunnerSegue" id="DQi-7u-AL3"/>
+                        <segue destination="KvZ-om-fow" kind="show" identifier="addRunnerSegue" id="BvC-7u-viG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvp-LC-0gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -573,7 +573,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AoO-uy-xaQ"/>
-        <segue reference="EUI-wd-4Lr"/>
+        <segue reference="x4r-vr-S60"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

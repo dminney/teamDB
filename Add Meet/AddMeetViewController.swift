@@ -57,11 +57,15 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     let picker = UIDatePicker()
     var meetinfo : MeetDataModel?{
        didSet {
-      //  configureCells()
-        print("meetinfo Set")
+       configureCells()
+        
         }
     }
-    var eventinfo : EventDataModel?
+    var eventinfo : EventDataModel?{
+        didSet{
+         //
+        }
+    }
     var eventRowSelected = false
     
     override func viewDidLoad() {
@@ -159,8 +163,8 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
  @objc func accessoryButtonTapped(sender:UIButton){
     
         let indexPath = sender.tag
-        self.eventinfo = self.eventList[indexPath]
-    
+    self.eventinfo = eventList[indexPath]
+ 
         performSegue(withIdentifier: "addRunnerSegue", sender: self)
         
     }
@@ -189,11 +193,11 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        EventTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
-        self.eventinfo = self.eventList[indexPath.row]
-        performSegue(withIdentifier: "addRunnerSegue", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+//        EventTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+//        self.eventinfo = self.eventList[indexPath.row]
+//        performSegue(withIdentifier: "addRunnerSegue", sender: self)
+//    }
     
     
     
