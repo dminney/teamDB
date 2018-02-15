@@ -335,15 +335,15 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-p0-Tsp">
                                 <rect key="frame" x="0.0" y="579" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="save" id="xbV-oK-NOW">
-                                        <connections>
-                                            <action selector="saveBtnPressed:" destination="Tzl-af-72v" id="ctG-DE-FLf"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MOn-gq-GhI"/>
                                     <barButtonItem systemItem="cancel" id="HF2-sy-cI4">
                                         <connections>
                                             <action selector="cancelBtnPressed:" destination="Tzl-af-72v" id="R8Q-Nc-yen"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MOn-gq-GhI"/>
+                                    <barButtonItem style="plain" systemItem="add" id="xbV-oK-NOW">
+                                        <connections>
+                                            <action selector="saveBtnPressed:" destination="Tzl-af-72v" id="ctG-DE-FLf"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -452,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="2052" y="-2098"/>
         </scene>
-        <!--Meet Table View Controller-->
+        <!--All Meets-->
         <scene sceneID="Oeg-ep-XbG">
             <objects>
                 <viewController id="Wpe-oW-s4k" customClass="MeetTableViewController" customModule="CC_Runner" customModuleProvider="target" sceneMemberID="viewController">
@@ -527,13 +527,14 @@
                         <constraints>
                             <constraint firstItem="yNF-j1-ZXV" firstAttribute="trailing" secondItem="XEs-q8-Ld3" secondAttribute="trailing" constant="16" id="7cs-g8-Nyc"/>
                             <constraint firstItem="XEs-q8-Ld3" firstAttribute="top" secondItem="yNF-j1-ZXV" secondAttribute="top" constant="40" id="BJ6-D0-w7x"/>
+                            <constraint firstItem="WF2-gh-36Y" firstAttribute="centerX" secondItem="Vud-bZ-rem" secondAttribute="centerX" id="NL1-d5-2AI"/>
                             <constraint firstItem="WF2-gh-36Y" firstAttribute="leading" secondItem="yNF-j1-ZXV" secondAttribute="leading" constant="16" id="REu-Xd-wC8"/>
                             <constraint firstItem="XEs-q8-Ld3" firstAttribute="leading" secondItem="yNF-j1-ZXV" secondAttribute="leading" constant="16" id="jNT-Zv-uej"/>
                             <constraint firstItem="WF2-gh-36Y" firstAttribute="top" secondItem="XEs-q8-Ld3" secondAttribute="bottom" constant="35" id="ktr-hx-hYA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yNF-j1-ZXV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lxr-qM-jpU">
+                    <navigationItem key="navigationItem" title="All Meets" id="lxr-qM-jpU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B0E-PZ-gQP">
                             <connections>
                                 <segue destination="WiK-V8-qB1" kind="show" identifier="AddMeetSegue" id="EUI-wd-4Lr"/>
@@ -572,8 +573,8 @@
         <image name="37283751581_f77a4a5ee8_z" width="640" height="427"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AoO-uy-xaQ"/>
-        <segue reference="x4r-vr-S60"/>
+        <segue reference="T9M-v0-pVH"/>
+        <segue reference="EUI-wd-4Lr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

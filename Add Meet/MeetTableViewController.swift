@@ -29,7 +29,7 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     var meetList : Results<MeetDataModel>!
     var ref: DatabaseReference!
     var db: OpaquePointer?
-
+    var rowselected : Bool = false
     
      @IBOutlet var meetTableView: UITableView!
     
@@ -61,6 +61,7 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowselected = true
         performSegue(withIdentifier: "EditMeetView", sender: self)
     }
     
@@ -130,22 +131,21 @@ class MeetTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddMeetSegue"
         {
-    //        let sendingVC: AddMeetViewController = segue.destination as! AddMeetViewController
+            //        let sendingVC: AddMeetViewController = segue.destination as! AddMeetViewController
             
-//            sendingVC.delegate = self as! DataSentDelegate
+            //            sendingVC.delegate = self as! DataSentDelegate
         }
         else if segue.identifier == "EditMeetView"
         {
             let DvC = segue.destination as! AddMeetViewController
-            if let indexPath = (self.meetTableView.indexPathForSelectedRow) {
-                DvC.meetinfo = meetList?[indexPath.row]
+            if rowselected {
+                let selectedrow =  (meetTableView.indexPathForSelectedRow?.row)!
+                appState.currentMeet = meetList[selectedrow]
+                DvC.meetinfo = meetList[selectedrow]
+                DvC.meetonlineid = meetList[selectedrow].idKey
+                DvC.selectedrow = selectedrow
             }
-        
-            appState.currentMeet = meetList[selectedrow]
-            DvC.meetinfo = meetList[selectedrow]
-            DvC.meetonlineid = meetList[selectedrow].idKey
-            DvC.selectedrow = selectedrow
-         //   DvC.delegate = self
+            //   DvC.delegate = self
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

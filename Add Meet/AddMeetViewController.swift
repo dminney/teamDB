@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
+//import Firebase
+//import FirebaseDatabase
 import RealmSwift
 
 protocol DataSentDelegate {
@@ -31,7 +31,7 @@ class EventCell : UITableViewCell {
 
 
 
-class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate {
+class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     
     var delegate : DataSentDelegate? = nil
@@ -53,32 +53,23 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var zipCodeLabel: UITextField!
     
     
-    var ref: DatabaseReference!
+ //   var ref: DatabaseReference!
     let picker = UIDatePicker()
-    var meetinfo : MeetDataModel?{
-       didSet {
-       configureCells()
-        
-        }
-    }
-    var eventinfo : EventDataModel?{
-        didSet{
-         //
-        }
-    }
+    var meetinfo : MeetDataModel?
+    var eventinfo : EventDataModel?
     var eventRowSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         EventTableView.delegate = self
         EventTableView.dataSource = self
-        meetpicker.delegate = self
-        meetpicker.dataSource = self
+ //       meetpicker.delegate = self
+ //       meetpicker.dataSource = self
         appstate = (tabBarController as! CustomTabbarController).appState!
         createDatePicker()
-        configureCells()
+     
         // Initial Setup of Default Text Labels
-       // oldMeets = DBAccessor.sharedInstance.getMeets()
+   
        
        
     }
@@ -96,6 +87,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         eventRowSelected = false
         attemptReloadofTableView()
+        configureCells()
     }
     
     // MARK: PickerView
@@ -104,18 +96,26 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return oldMeets.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        var rowString = ""
-        self.view.endEditing(true)
-        rowString = oldMeets[row].name
-        
-        return rowString
-        
-    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return pickerData.count
+//    }
+//    // The data to return for the row and component (column) that's being passed in
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return pickerData[row]
+//    }
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return oldMeets.count
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        var rowString = ""
+//        self.view.endEditing(true)
+//        rowString = oldMeets[row].name
+//
+//        return rowString
+//
+//    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.titleLabel.text = oldMeets[row].name
@@ -226,51 +226,67 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    @IBAction func saveMeetButtonPressed(_ sender: Any) {
-        
+    func saveMeettoRealm() -> Int{
         if (titleLabel.text?.isEmpty)! {
             titleLabel.layer.borderColor = UIColor.red.cgColor
-            return
+            titleLabel.layer.borderWidth = 2.0
+            return -1
+        } else {
+             titleLabel.layer.borderWidth = 0
         }
         if (locationLabel.text?.isEmpty)!{
             locationLabel.layer.borderColor = UIColor.red.cgColor
-            return
+            locationLabel.layer.borderWidth = 2.0
+            return -1
+        } else {
+            locationLabel.layer.borderWidth = 0
         }
         if (dateLabel.text?.isEmpty)!{
             dateLabel.layer.borderColor = UIColor.red.cgColor
-            return
+            dateLabel.layer.borderWidth = 2.0
+            return -1
+        } else {
+             dateLabel.layer.borderWidth = 0
         }
         if (zipCodeLabel.text?.isEmpty)!{
             zipCodeLabel.text = String(0)
         }
+        
         let name = titleLabel.text
         let location = locationLabel.text
         let datetext = dateLabel.text
         let citytext = cityLabel.text
         let statetext = stateLabel.text
         let ziptext = zipCodeLabel.text
-    //    let newmeet : Dictionary = ["name":name!, "location":location!,"date":datetext!,"city":citytext,"state":statetext, "zipcode":ziptext] as [String : AnyObject]
         
+        let meetIdKey = (meetinfo?.idKey ?? "")
+        if meetIdKey != "" {
+            try! uiRealm.write {
+                meetinfo?.name = name!
+                meetinfo?.date = datetext!
+                meetinfo?.address = location
+                meetinfo?.city = citytext
+                meetinfo?.state = statetext
+                meetinfo?.zipcode.value = Int(ziptext!)
+            }
+            return 2
+                navigationController?.popViewController(animated: true)
+                
+            } else {
+                let newMeet = MeetDataModel(name: name!, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!)
+                newMeet.writeToRealm()
+                meetonlineid = newMeet.idKey
+                meetinfo = newMeet
+                navigationController?.popViewController(animated: true)
+            return 3
+            }
+    }
     
-        if meetonlineid != "" {
-           // ref?.child("Meet").child(meetonlineid).setValue(newmeet)
-         //    let datestring = "\(Date(timeIntervalSince1970: 0))"
-            let updatedMeet = MeetDataModel(name: name!, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!)
-            updatedMeet.writeToRealm()
-            meetinfo = updatedMeet
-            navigationController?.popViewController(animated: true)
-
-        } else {
-//            let meetRef = ref.child("Meet").childByAutoId()
-//            meetRef.setValue(newmeet)
-            let updatedMeet = MeetDataModel(name: name!, date: datetext!, address: location!, city: citytext!, state: statetext!, zipcode: Int(ziptext!)!)
-            updatedMeet.writeToRealm()
-            meetonlineid = updatedMeet.idKey
-            meetinfo = updatedMeet
-           // if DBAccessor.sharedInstance.addMeet(meetname: name!, meetid: meetonlineid, meetdate: datetext!, meetaddress: location!,meetcity: citytext!, meetstate: statetext!,meetzipcode: Int(ziptext!)!) != nil{
-            navigationController?.popViewController(animated: true)
-                }
+    @IBAction func saveMeetButtonPressed(_ sender: Any) {
         
+        if saveMeettoRealm() > 0 {
+            navigationController?.popViewController(animated: true)
+        }
      
     }
     
@@ -298,12 +314,12 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // format picker for Date
         picker.datePickerMode = .date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "HH:mm a"
-        let eventTime = eventinfo?.time ?? "12:00 a"
-        if let date = dateFormatter.date(from: (eventTime)) {
-            picker.date = date
-        }
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat =  "HH:mm a"
+//        let eventTime = eventinfo?.time ?? "12:00 a"
+//        if let date = dateFormatter.date(from: (eventTime)) {
+//            picker.date = date
+//        }
 
         
     }
@@ -323,14 +339,26 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if let ident = identifier {
+            if ident == "addEventSegue" {
+                if saveMeettoRealm() < 0 {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addEventSegue" {
             // Get the new view controller using segue.destinationViewController.
-            // Pass the meet online id to the new view controller.
             let DvC = segue.destination as! AddEventViewController
+            // Pass the meet online id to the new view controller.
             DvC.currentMeet = meetinfo
+            
         } else if segue.identifier == "editEventSegue" {
             let DvC = segue.destination as! AddEventViewController
             DvC.currentMeet = meetinfo
@@ -346,11 +374,11 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             let DvC = segue.destination as! AddMeetRunnerViewController
             DvC.eventData = self.eventinfo
-            }
-   //     self.eventList.removeAll()
+        }
+        
         EventTableView.reloadData()
         
-       
+        
     }
     
     

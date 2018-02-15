@@ -214,9 +214,12 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         dateLabel.inputView = picker
         
         // format picker for Date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: "08:00")
         
         picker.datePickerMode = .time
-        
+        picker.date = date!
     }
     
     @objc func donePressed(){

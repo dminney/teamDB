@@ -13,12 +13,7 @@ import RealmSwift
 
 class AddMeetRunnerViewController: UITableViewController {
     var ref: DatabaseReference!
-    var eventData : EventDataModel? {
-        didSet {
-          print(eventData)
-        //    eventTitleLabel.text = eventData?.team
-        }
-    }
+    var eventData : EventDataModel?
     var runnershown = AddRunnerCellModel(id:0)
     var runnerid = " "
    
@@ -120,7 +115,7 @@ class AddMeetRunnerViewController: UITableViewController {
         runnerTableView.delegate = self
         runnerTableView.dataSource = self
           fillDataModel()
-       
+       eventTitleLabel.text = eventData?.name
     }
 
     
